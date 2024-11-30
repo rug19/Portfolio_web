@@ -7,10 +7,25 @@ import {
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 import IconLink from "../components/IconButton";
+import Particle from "../components/Particle";
 
 export default function Home() {
   return (
     <>
+      {/* Fundo de partículas */}
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: -1, // Faz com que o fundo fique atrás do conteúdo
+        }}
+      >
+        <Particle />
+      </div>
+
       {/* Main container */}
       <div className=" h-screen flex justify-center items-center">
         <div className="flex flex-col-reverse justify-around flex-justify md:flex-row items-center gap-20">
