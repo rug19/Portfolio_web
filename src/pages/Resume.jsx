@@ -1,8 +1,8 @@
-export default function Skills() {
+export default function About() {
   return (
     <>
       <div>
-        <p>Skills</p>
+        <p>Resume</p>
       </div>
     </>
   );

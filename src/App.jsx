@@ -6,9 +6,8 @@ import "./App.css";
 function App() {
   return (
     <>
-    <Header />
       <BrowserRouter>
-        
+        <Header />
         <AppRoutes />
       </BrowserRouter>
     </>
