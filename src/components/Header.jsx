@@ -1,16 +1,18 @@
 import { Link, useLocation } from "react-router-dom";
+import Drawer from "./Drawer";
 
 export default function Header() {
   const location = useLocation();
 
   return (
-    <header className="flex justify-between items-center bg-black fixed top-0 left-0 w-full h-20 p-5  ">
-      <div className="ml-20">
-        <h2 className="text-2xl  text-white  font-sans">
+    <header className="  md:flex  md:justify-between md:items-center  fixed top-0 left-0 w-full h-20 md:p-5 justify-between items-center p-5   ">
+      <div className="ml-0 md:ml-20  ">
+        <h2 className="text-2xl  md:text-3xl text-white  font-sans">
           RugCosta<span className="text-green">.</span>
         </h2>
+        <Drawer/>
       </div>
-      <nav className="flex text-sm mr-20 gap-10 font-sans text-white">
+      <nav className="hidden lg:flex md:mr-0 text-sm mr-20 gap-10 font-sans text-white">
         <Link
           to="/"
           className={` ${
