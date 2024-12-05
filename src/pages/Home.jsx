@@ -33,8 +33,8 @@ export default function Home() {
       <div id="home" className=" h-screen flex justify-center items-center">
         <div className="flex flex-col-reverse justify-around flex-justify lg:flex-row items-center lg:gap-20">
           <div className=" flex flex-col gap-2 lg:gap-7 md:flexitems-center">
-          <h1 className="text-4xl md:text-6xl font-sans text-white max-[400px]:text-3xl text-center lg:text-left leading-tight">
-          Nice to meet you!
+            <h1 className="text-4xl md:text-6xl font-sans text-white max-[400px]:text-3xl text-center lg:text-left leading-tight">
+              Nice to meet you!
               <br />
               <span className="text-green">I'm Ruan Gomes</span>
             </h1>
@@ -48,7 +48,7 @@ export default function Home() {
               efficient.
             </p>
             <div className="flex flex-col lg:flex-row gap-5 items-center ">
-              <button className="  border-2 border-green  text-green tracking-widest  font-semibold font-sans  text-xs px-3 py-2 rounded-full hover:bg-green hover:text-primary">
+              <button className=" border-2 border-green  text-green tracking-widest  font-semibold font-sans  text-xs px-3 py-2 rounded-full hover:bg-green hover:text-primary">
                 DOWNLOAD CV{" "}
                 <span>
                   <FontAwesomeIcon className="text-inherit" icon={faDownload} />
