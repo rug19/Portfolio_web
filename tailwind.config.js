@@ -13,6 +13,13 @@ export default {
       fontFamily: {
         sans: ["JetBrains Mono", "monospace"], // Define como padrão
       },
+      scrollbar:{
+        DEFAULT: {
+          track: "bg-green",
+          thumb: "bg-primary",
+          hover: "bg-blackgray",
+        },
+      }
     },
   },
   plugins: [

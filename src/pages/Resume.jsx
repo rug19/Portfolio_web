@@ -1,7 +1,20 @@
+import { useState } from "react";
 import Education from "../components/Education";
 import Particle from "../components/Particle";
+import Skills from "../components/Skills";
+import AboutMe from "../components/AboutMe";
 
 export default function Resume() {
+  const buttonClasses =
+    "border-2 border-green text-white text-sm tracking-widest font-semibold font-sans px-3 py-2 rounded-xl w-60  hover:bg-green hover:text-black";
+  // Object the maps the components
+  const pages = {
+    education: <Education />,
+    skills: <Skills />,
+    aboutMe: <AboutMe />,
+  };
+
+  const [selectPage, setSelectPage] = useState("education");
   return (
     <>
       <div>
@@ -19,26 +32,38 @@ export default function Resume() {
           <Particle />
         </div>
         {/* Container */}
-        <div className="h-screen flex  justify-center items-center">
-          <div className=" border-2 rounded-2xl border-green flex gap-20 bg-black bg-opacity-90 p-10 w-1/1 ">
+        <div className="h-screen flex  justify-center items-center ">
+          <div className=" rounded-2xl flex gap-20 bg-black bg-opacity-50 p-10 w-1/1 ">
             <div className="flex flex-col gap-5">
               <h2 className="text-white font-sans text-5xl">Why hire me? </h2>
-              <p className="text-white max-w-[400px] font-sans">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                necessitatibus iure dicta.
+              <p className="text-white max-w-[400px] font-sans text-justify">
+                As a Full Stack Developer, I bring expertise in building
+                scalable, user-focused applications with a seamless
+                front-to-back integration.
               </p>
               <div className="flex flex-col gap-5">
-                <button className="border-2 border-green text-white text-sm tracking-widest  font-semibold font-sans  px-3 py-2 rounded-xl w-52 hover:bg-green hover:text-black">
-                  
+                <button
+                  onClick={() => setSelectPage("education")}
+                  className={buttonClasses}
+                >
                   Education
                 </button>
-                <button  className="border-2 border-green text-white text-sm tracking-widest  font-semibold font-sans  px-3 py-2 rounded-xl w-52 hover:bg-green hover:text-black">Skills</button>
-                <button  className="border-2 border-green text-white text-sm tracking-widest  font-semibold font-sans  px-3 py-2 rounded-xl w-52 hover:bg-green hover:text-black">About me</button>
+                <button
+                  onClick={() => setSelectPage("skills")}
+                  className={buttonClasses}
+                >
+                  Skills
+                </button>
+                <button
+                  onClick={() => setSelectPage("aboutMe")}
+                  className={buttonClasses}
+                >
+                  About me
+                </button>
               </div>
             </div>
-            <div>
-              <Education/>
-            </div>
+            {/* Render the components  */}
+            <div>{pages[selectPage]}</div>
           </div>
         </div>
       </div>

@@ -36,14 +36,14 @@ export default function Education() {
     <>
       <div>
         <div>
-          <h1 className="text-white font-sans text-3xl"> My Education</h1>
+          <h1 className="text-white font-sans text-3xl mb-5"> My Education</h1>
           <p className="text-white font-sans max-w-[500px]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Consequuntur sit at aspernatur ullam eveniet tempore .
           </p>
         </div>
         {/* Container */}
-        <div className="h-72 w-100 overflow-y-scroll scroll-smooth focus:scroll-auto pt-4  grid grid-cols-2 gap-4 mt-5 ">
+        <div className="max-h-72 w-full overflow-auto scrollbar-thin scrollbar-thumb-green scrollbar-track-transparent pt-2 grid grid-cols-2 gap-3 mt-5">
           {items.map((item) => (
             <div className="flex-1 h-32 max-w-[100%] p-4 border border-green text-white rounded font-sans" key={item.id}>
               <p>{item.year}</p>
