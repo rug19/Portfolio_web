@@ -19,7 +19,6 @@ export default function Resume() {
     <>
       <div>
         <div
-          className="hidden md:flex"
           style={{
             position: "absolute",
             top: 0,
@@ -32,16 +31,16 @@ export default function Resume() {
           <Particle />
         </div>
         {/* Container */}
-        <div className="h-screen flex  justify-center items-center ">
-          <div className=" rounded-2xl flex gap-20 bg-black bg-opacity-50 p-10 w-1/1 ">
+        <div className="h-screen flex  justify-center items-center mt-20 lg:mt-0">
+          <div className="h-screen lg:h-auto rounded-2xl  flex flex-col lg:flex-row gap-20 bg-black bg-opacity-50 p-5 lg:p-10 w-1/1 ">
             <div className="flex flex-col gap-5">
-              <h2 className="text-white font-sans font-bold text-5xl">Why hire me? </h2>
+              <h2 className="text-white font-sans font-bold text-4xl text-center  lg:text-5xl ">Why hire me? </h2>
               <p className="text-white max-w-[400px] font-sans text-justify">
                 As a Full Stack Developer, I bring expertise in building
                 scalable, user-focused applications with a seamless
                 front-to-back integration.
               </p>
-              <div className="flex flex-col gap-5">
+              <div className="flex justify-center items-center lg:flex flex-col gap-5">
                 <button
                   onClick={() => setSelectPage("education")}
                   className={buttonClasses}
@@ -63,7 +62,7 @@ export default function Resume() {
               </div>
             </div>
             {/* Render the components  */}
-            <div className="flex-1 h-[500px] ">{pages[selectPage]}</div>
+            <div className="flex-1 h-[300px] ">{pages[selectPage]}</div>
           </div>
         </div>
       </div>

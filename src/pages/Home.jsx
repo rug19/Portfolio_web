@@ -69,7 +69,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div>
+      {/* <div>
         <section id="resume" className="block lg:hidden h-screen">
           <Resume />
         </section>
@@ -79,7 +79,7 @@ export default function Home() {
         <section id="contacts" className="block lg:hidden h-screen">
           <Contacts />
         </section>
-      </div>
+      </div> */}
     </>
   );
 }

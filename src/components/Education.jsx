@@ -43,7 +43,7 @@ export default function Education() {
           </p>
         </div>
         {/* Container */}
-        <div className="max-h-72 w-full overflow-auto scrollbar-thin scrollbar-thumb-green scrollbar-track-transparent pt-2 grid grid-cols-2 gap-3 mt-5">
+        <div className=" max-h-72 w-full overflow-auto scrollbar-thin scrollbar-thumb-green scrollbar-track-transparent pt-2 lg:grid lg:grid-cols-2 gap-3 mt-5">
           {items.map((item) => (
             <div className="flex-1 h-32 max-w-[100%] p-4 border border-green text-white rounded font-sans" key={item.id}>
               <p>{item.year}</p>
