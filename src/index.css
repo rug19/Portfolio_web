@@ -15,6 +15,12 @@
     background-color: black/* Fundo claro */
     
   }
+
+  body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  
   
   * {
     box-sizing: inherit; /* Aplica o box-sizing a todos os elementos */
