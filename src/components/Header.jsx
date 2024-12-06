@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import Drawer from "./Drawer";
-const underline = "text-green underline underline-offset-8";
+
 
 export default function Header() {
   const location = useLocation();
