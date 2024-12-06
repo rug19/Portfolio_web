@@ -36,7 +36,7 @@ export default function Education() {
     <>
       <div>
         <div>
-          <h1 className="text-white font-sans text-3xl mb-5"> My Education</h1>
+          <h1 className="text-white font-sans font-semibold text-3xl mb-5"> My Education</h1>
           <p className="text-white font-sans max-w-[500px]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Consequuntur sit at aspernatur ullam eveniet tempore .

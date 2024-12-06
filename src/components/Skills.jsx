@@ -69,7 +69,7 @@ export default function Skills() {
     <>
       <div>
         <div>
-          <h1 className="text-white font-sans text-3xl mb-5">My Skills</h1>
+          <h1 className="text-white font-sans font-semibold text-3xl mb-5">My Skills</h1>
           <p className="text-white font-sans max-w-[500px]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
             aliquam nemo est quaerat sequi cumque. Lorem ipsum dolor sit amet

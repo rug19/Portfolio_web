@@ -35,7 +35,7 @@ export default function Resume() {
         <div className="h-screen flex  justify-center items-center ">
           <div className=" rounded-2xl flex gap-20 bg-black bg-opacity-50 p-10 w-1/1 ">
             <div className="flex flex-col gap-5">
-              <h2 className="text-white font-sans text-5xl">Why hire me? </h2>
+              <h2 className="text-white font-sans font-bold text-5xl">Why hire me? </h2>
               <p className="text-white max-w-[400px] font-sans text-justify">
                 As a Full Stack Developer, I bring expertise in building
                 scalable, user-focused applications with a seamless
@@ -63,7 +63,7 @@ export default function Resume() {
               </div>
             </div>
             {/* Render the components  */}
-            <div>{pages[selectPage]}</div>
+            <div className="flex-1 h-[500px] ">{pages[selectPage]}</div>
           </div>
         </div>
       </div>
