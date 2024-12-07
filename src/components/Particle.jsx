@@ -3,32 +3,37 @@ import { useEffect, useRef } from "react";
 const Particle = () => {
   const canvasRef = useRef(null);
 
+  const calculateParticles = () => {
+    if (window.innerWidth <= 768) return 40; // Para dispositivos móveis
+    if (window.innerWidth <= 1024) return 75; // Para tablets
+    return 100; // Para desktops
+  };
+
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     const particlesArray = [];
-    const numberOfParticles = 100;
+    let numberOfParticles = calculateParticles();
     const linkDistance = 150;
 
-    // Configurações iniciais
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+      numberOfParticles = calculateParticles();
+      initParticles(); // Recria partículas com o novo número
     };
 
     window.addEventListener("resize", handleResize);
 
-    // Coordenadas do mouse
     const mouse = {
       x: null,
       y: null,
-      radius: 100, // Raio de interação
+      radius: 100,
     };
 
-    // Atualiza a posição do mouse
     const handleMouseMove = (event) => {
       mouse.x = event.clientX;
       mouse.y = event.clientY;
@@ -48,16 +53,14 @@ const Particle = () => {
       }
 
       update() {
-        // Calcula a distância entre a partícula e o mouse
         const dx = this.x - mouse.x;
         const dy = this.y - mouse.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        // Se dentro do raio, afasta a partícula
         if (distance < mouse.radius) {
           const angle = Math.atan2(dy, dx);
           const force = (mouse.radius - distance) / mouse.radius;
-          const forceX = Math.cos(angle) * force * 5; // Multiplicador para o afastamento
+          const forceX = Math.cos(angle) * force * 5;
           const forceY = Math.sin(angle) * force * 5;
 
           this.x += forceX;
@@ -67,7 +70,6 @@ const Particle = () => {
         this.x += this.speedX * this.depth;
         this.y += this.speedY * this.depth;
 
-        // Rebote nas bordas
         if (this.x > canvas.width || this.x < 0) this.speedX = -this.speedX;
         if (this.y > canvas.height || this.y < 0) this.speedY = -this.speedY;
       }
