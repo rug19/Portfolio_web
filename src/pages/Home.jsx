@@ -8,9 +8,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import IconLink from "../components/IconButton";
 import Particle from "../components/Particle";
-import Resume from "../pages/Resume";
-import Projects from "./Projects";
-import Contacts from "./Contacts";
 
 export default function Home() {
   return (
@@ -69,17 +66,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* <div>
-        <section id="resume" className="block lg:hidden h-screen">
-          <Resume />
-        </section>
-        <section id="projects" className="block lg:hidden h-screen">
-          <Projects />
-        </section>
-        <section id="contacts" className="block lg:hidden h-screen">
-          <Contacts />
-        </section>
-      </div> */}
     </>
   );
 }

@@ -12,10 +12,10 @@ export default function Drawer() {
   };
 
   return (
-    <div className="lg:hidden">
+    <div className="lg:hidden ">
       {/* Botão para abrir o Drawer */}
       <button
-        className="text-white bg-green-500 p-2 rounded-md fixed top-4 right-4 z-50"
+        className="text-white bg-green-500 p-2 rounded-md fixed top-4 right-4 z-50 "
         onClick={toggleDrawer}
       >
         <FontAwesomeIcon

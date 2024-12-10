@@ -5,6 +5,10 @@ export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"], // Certifique-se de que os caminhos estão corretos
   theme: {
     extend: {
+      screens: {
+        sm: "500px", // Define o breakpoint `sm` como 600px
+       
+      },
       colors: {
         primary: "#1c1c22",
         green: "#00e187",
