@@ -6,7 +6,8 @@ export default {
   theme: {
     extend: {
       screens: {
-        sm: "500px", // Define o breakpoint `sm` como 600px
+        sm: "500px",
+        sx:"500px" // Define o breakpoint `sm` como 600px
        
       },
       colors: {
