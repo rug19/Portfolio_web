@@ -1,18 +1,26 @@
 import { FaGithub } from "react-icons/fa";
 import Particle from "../components/Particle";
 import { BsArrowUpRight } from "react-icons/bs";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export default function Projects() {
   const items = [
     {
       id: 1,
+      name: "",
+      description: "",
+      tecnolohies: "",
+      liveUrl: "",
+      gitUrl: "",
       image: "/public/desktop-preview.jpg",
       alt: "Land page",
     },
   ];
   const linkStyle =
     "flex items-center justify-center w-11 h-11 border-2 border-green rounded-full text-green hover:bg-green hover:text-primary cursor-pointer";
-    const imgStyle = "h-[350px]"
+  const imgStyle = "h-[350px]  mb-3";
+  const buttonStyle =
+    "flex items-center justify-center w-8 h-8 border-2 border-green  text-black bg-green hover:text-primary cursor-pointer";
   return (
     <>
       <div>
@@ -48,7 +56,7 @@ export default function Projects() {
                   <BsArrowUpRight className="size-6 " />
                 </a>
                 <a className={linkStyle} href="">
-                  <FaGithub className="size-6 " />
+                  <FaGithub className="size-6  " />
                 </a>
               </div>
             </div>
@@ -56,9 +64,14 @@ export default function Projects() {
               {items.map((item) => (
                 <div key={item.id}>
                   <img className={imgStyle} src={item.image} alt={item.alt} />
-                  <div>
-                    <button></button>
-                    <button></button>
+                  <div className="flex justify-end gap-2">
+                    <button className={buttonStyle}>
+                      <IoIosArrowBack className="size-5" />
+                    </button>
+                    <button className={buttonStyle}>
+                      {" "}
+                      <IoIosArrowForward className="size-5" />
+                    </button>
                   </div>
                 </div>
               ))}
