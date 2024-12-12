@@ -2,29 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto; 
+  box-sizing: border-box; /* Garante que o box model seja consistente */
+}
 
-  html, body {
-    height: 100%; /* Garante que ocupe 100% da altura da tela */
-    margin: 0;    /* Remove margens padrão */
-    padding: 0;   /* Remove padding padrão */
-    box-sizing: border-box; /* Garante que o box model seja consistente */
-  }
-  
-  body {
-    font-family: Arial, sans-serif; /* Fonte padrão */
-    background-color: black/* Fundo claro */
-    
-  }
+body {
+  font-family: Arial, sans-serif; /* Fonte padrão */
+  background-color: black; /* Fundo claro */
+}
 
-  body::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-  }
-  
-  
-  * {
-    box-sizing: inherit; /* Aplica o box-sizing a todos os elementos */
-  }
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
 
+* {
+  box-sizing: inherit; /* Aplica o box-sizing a todos os elementos */
+}
 
-
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

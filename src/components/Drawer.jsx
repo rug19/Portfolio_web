@@ -1,26 +1,21 @@
 import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons/faBarsStaggered";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import { Link as ScrollLink } from "react-scroll";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Drawer() {
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState(""); // Estado para a seção ativa
 
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleSetActive = (section) => {
-    setActiveSection(section); // Atualiza a seção ativa
-    toggleDrawer(!isOpen); // Fecha o Drawer
-  };
-
   return (
-    <div className=" lg:hidden">
+    <div className="lg:hidden ">
       {/* Botão para abrir o Drawer */}
       <button
-        className="text-white bg-green-500 p-2 rounded-md fixed top-4 right-4 z-50"
+        className="text-white bg-green-500 p-2 rounded-md fixed top-4 right-4 z-50 "
         onClick={toggleDrawer}
       >
         <FontAwesomeIcon
@@ -49,68 +44,56 @@ export default function Drawer() {
           </h2>
           <ul className="mt-10 text-center space-y-4">
             <li>
-              <ScrollLink
-                to="home"
-                smooth={true}
-                duration={500}
-                className={`block px-4 py-2 rounded-md ${
-                    activeSection === "resume"
-                      ? "text-green underline underline-offset-8"
-                      : "hover:underline hover:underline-offset-8 hover:text-green"
-                  }`}
-                onSetActive={() => setActiveSection("home")}
-                onClick={handleSetActive}
+              <Link
+                to="/"
+                className={`${
+                  location.pathname === "/"
+                    ? "text-green underline underline-offset-8"
+                    : "hover:underline hover:underline-offset-8 hover:text-green"
+                }`}
+                onClick={toggleDrawer}
               >
                 Home
-              </ScrollLink>
+              </Link>
             </li>
             <li>
-              <ScrollLink
-                to="resume"
-                smooth={true}
-                duration={500}
-                className={`block px-4 py-2 rounded-md cursor-pointer ${
-                  activeSection === "resume"
+              <Link
+                to="/resume"
+                className={`${
+                  location.pathname === "/resume"
                     ? "text-green underline underline-offset-8"
                     : "hover:underline hover:underline-offset-8 hover:text-green"
                 }`}
-                onSetActive={() => setActiveSection("resume")}
-                onClick={handleSetActive}
+                onClick={toggleDrawer}
               >
                 Resume
-              </ScrollLink>
+              </Link>
             </li>
             <li>
-              <ScrollLink
-                to="projects"
-                smooth={true}
-                duration={500}
-                className={`block px-4 py-2 rounded-md cursor-pointer ${
-                  activeSection === "projects"
+              <Link
+                to="/projects"
+                className={`${
+                  location.pathname === "/projects"
                     ? "text-green underline underline-offset-8"
                     : "hover:underline hover:underline-offset-8 hover:text-green"
                 }`}
-                onSetActive={() => setActiveSection("portfolio")}
-                onClick={handleSetActive}
+                onClick={toggleDrawer}
               >
-                Portfolio
-              </ScrollLink>
+                Project
+              </Link>
             </li>
             <li>
-              <ScrollLink
-                to="contacts"
-                smooth={true}
-                duration={500}
-                className={`block px-4 py-2 rounded-md cursor-pointer ${
-                  activeSection === "contacts"
+              <Link
+                to="/contacts"
+                className={`${
+                  location.pathname === "/contacts"
                     ? "text-green underline underline-offset-8"
                     : "hover:underline hover:underline-offset-8 hover:text-green"
                 }`}
-                onSetActive={() => setActiveSection("contact")}
-                onClick={handleSetActive}
+                onClick={toggleDrawer}
               >
                 Contact
-              </ScrollLink>
+              </Link>
             </li>
           </ul>
         </nav>

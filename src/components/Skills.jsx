@@ -69,18 +69,18 @@ export default function Skills() {
     <>
       <div>
         <div>
-          <h1 className="text-white font-sans font-semibold text-3xl mb-5">My Skills</h1>
-          <p className="text-white font-sans max-w-[500px]">
+          <h1 className="text-white font-sans font-semibold text-center lg:text-start  text-4xl lg:text-3xl mb-5">My Skills</h1>
+          <p className="text-white font-sans lg:max-w-[500px] md:max-w-[600px] text-center lg:text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
             aliquam nemo est quaerat sequi cumque. Lorem ipsum dolor sit amet
             consectetur adipisicing elit.
           </p>
         </div>
 
-        <div className="max-h-52  overflow-auto scrollbar-thin scrollbar-thumb-green scrollbar-track-transparent pt-2 grid grid-cols-4 gap-3 mt-5">
+        <div className=" lg:max-h-52 h-auto  lg:overflow-auto lg:scrollbar-thin lg:scrollbar-thumb-green lg:scrollbar-track-transparent pt-2 grid grid-cols-2  sm:grid-cols-3 md:grid-cols-4  gap-3 sm:mt-5 mb-10 sm:mb-0">
           {icons.map((item) => (
             <div
-              className="  flex justify-center items-center  w-28 p-4 border border-green text-white rounded font-sans"
+              className="  flex justify-center items-center  w-full p-4 border border-green text-white rounded font-sans"
               key={item.id}
             >
               <div>{item.icon}</div>

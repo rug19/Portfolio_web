@@ -1,6 +1,7 @@
 export default function AboutMe() {
-  const textStyle = "text-white font-sans mb-5";
-  const sectionStyle = "border border-green rounded-lg p-4 ";
+  const textStyle = "text-white font-sans mb-5 font-bold";
+  const sectionStyle =
+    "border border-green rounded-lg p-4 grid sm:grid-cols-2 max-w-[600px] lg:max-w-[500px] text-center sm:text-start mb-10 sm:mb-0";
   const dataLeft = [
     { label: "Name", value: "Ruan Gomes" },
     { label: "Experience", value: "1 year" },
@@ -22,12 +23,14 @@ export default function AboutMe() {
 
   return (
     <section>
-      <h1 className="text-white text-3xl font-sans font-semibold mb-4">About Me</h1>
-      <p className="text-white font-sans max-w-[500px] mb-6">
+      <h1 className="text-white text-3xl font-sans font-semibold mb-4 text-center lg:text-start">
+        About Me
+      </h1>
+      <p className="text-white font-sans max-w-[600px] lg:max-w-[500px] mb-6 text-center lg:text-start">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi fugit
         accusantium earum? Assumenda rem laborum atque.
       </p>
-      <div className={`${sectionStyle} grid grid-cols-2 max-w-[500px]`}>
+      <div className={`${sectionStyle} `}>
         {/* Coluna 1 */}
         <div className="flex-1 min-w-[200px]">
           {dataLeft.map((item, index) => (
