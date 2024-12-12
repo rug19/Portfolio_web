@@ -59,7 +59,7 @@ export default function Resume() {
                   onClick={() => setSelectPage("aboutMe")}
                   className={buttonClasses}
                 >
-                  About me
+                  About Me
                 </button>
               </div>
             </div>
