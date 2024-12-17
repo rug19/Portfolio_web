@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function Projects() {
   const linkStyle =
     "flex items-center justify-center w-11 h-11 border-2 border-green rounded-full text-green hover:bg-green hover:text-primary cursor-pointer";
-  const imgContainer = "relative w-full max-w-[500px] aspect-[16/9] rounded-lg";
+  const imgContainer = "relative z-0 w-full max-w-[500px] aspect-[16/9] rounded-lg";
   const imgStyle = "w-full h-full";
   const buttonStyle =
     "flex items-center justify-center  lg:w-8 h-7 border-2 border-green text-black bg-green hover:text-primary cursor-pointer";
