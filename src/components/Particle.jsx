@@ -91,8 +91,8 @@ const Particle = () => {
         const size = Math.random() * 4 + 1;
         const depth = Math.random() * 0.3 + 0.7;
         const color = `rgba(0, 225, 135, ${depth})`;
-        const speedX = (Math.random() * 0.5 - 0.25) * depth;
-        const speedY = (Math.random() * 0.5 - 0.25) * depth;
+        const speedX = (Math.random() * 0.8 - 0.25) * depth;
+        const speedY = (Math.random() * 0.8 - 0.25) * depth;
         particlesArray.push(new Particle(x, y, size, color, speedX, speedY, depth));
       }
     };

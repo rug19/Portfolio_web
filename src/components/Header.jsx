@@ -41,7 +41,7 @@ export default function Header() {
               : "hover:underline  hover:underline-offset-8 hover:text-green"
           }`}
         >
-          Project
+          Work
         </Link>
         <Link
           to="/contacts"
