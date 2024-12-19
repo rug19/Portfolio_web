@@ -54,7 +54,7 @@ export default function Projects() {
   };
 
   return (
-    <section className="pt-24 sm:pt-0">
+    <section className="pt-20 sm:pt-0">
       {/* Background Particles */}
       <div
         style={{
@@ -77,10 +77,10 @@ export default function Projects() {
             <h2 className="font-sans text-4xl font-bold text-white">
               {items[indiceAtual].title}
             </h2>
-            <p className="text-white md:max-w-[600px] lg:max-w-[400px] font-sans text-center lg:text-justify">
+            <p className="text-white md:max-w-[600px] lg:max-w-[400px] font-sans text-justify">
               {items[indiceAtual].description}
             </p>
-            <p className="text-green font-sans text-2xl border-b-[1px] pb-5">
+            <p className="text-green font-sans text-[20px] sm:text-2xl border-b-[1px] pb-5">
               {items[indiceAtual].tecnolohies}
             </p>
             <div className="flex gap-3">
