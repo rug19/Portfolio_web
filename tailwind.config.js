@@ -5,10 +5,12 @@ export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"], // Certifique-se de que os caminhos estão corretos
   theme: {
     extend: {
+      zIndex: {
+        max: "2147483647", // Definindo o valor máximo possível
+      },
       screens: {
         sm: "500px",
-        sx:"500px" // Define o breakpoint `sm` como 600px
-       
+        sx: "500px", // Define o breakpoint `sm` como 600px
       },
       colors: {
         primary: "#1c1c22",
@@ -18,13 +20,13 @@ export default {
       fontFamily: {
         sans: ["JetBrains Mono", "monospace"], // Define como padrão
       },
-      scrollbar:{
+      scrollbar: {
         DEFAULT: {
           track: "bg-green",
           thumb: "bg-primary",
           hover: "bg-blackgray",
         },
-      }
+      },
     },
   },
   plugins: [
