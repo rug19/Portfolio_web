@@ -48,7 +48,7 @@ export default function Header() {
           className={`${
             location.pathname === "/contacts"
               ? "text-green underline underline-offset-8 "
-              : "hover:underline  hover:underline-offset-8 hover:text-green"
+              : "hover:underline  hover:underline-offset-8 hover:text-green "
           }`}
         >
           Contact
