@@ -22,12 +22,10 @@ export default function Contacts() {
           <div>
             {" "}
             <h1 className="text-white text-4xl font-sans">
-            Let&apos;s work together
+              Let&apos;s work together
             </h1>
             <p className="text-white md:max-w-[600px] lg:max-w-[400px] font-sans text-justify">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam
-              labore corporis vitae in tempora voluptates quas laudantium
-              impedi.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
             <form action="" method="post">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -48,10 +46,37 @@ export default function Contacts() {
                 />
                 <input
                   className={inputStyle}
-                  type="phone"
+                  type="tel"
                   placeholder="Phone number"
+                  pattern="[0-9]"
+                  onInput={(e) => {
+                    e.target.value = e.target.value.replace(/[^0-9]/g, "");
+                  }}
                 />
               </div>
+              <select
+                className="bg-gray-800 bg-opacity-50 text-white p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 font-sans h-10 w-full mt-6"
+                id="service"
+              >
+                <option value="" disabled selected>
+                  Select the service
+                </option>
+                <option value="web-development">Web Developer</option>
+                <option value="mobile-development">Mobile Developer</option>
+                <option value="backend-development">Backend Developer</option>
+                <option value="api-integration">API Integration</option>
+                <option value="ecommerce">E-commerce Development</option>
+                <option value="responsive-design">Responsive Design</option>
+                <option value="database-management">Database Management</option>
+                <option value="maintenance-support">
+                  Maintenance & Support
+                </option>
+              </select>
+              <textarea
+                className="bg-gray-800 bg-opacity-50 text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 font-sans h-36 w-full mt-6"
+                name=""
+                id=""
+              ></textarea>
             </form>
           </div>
         </div>
