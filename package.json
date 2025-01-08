@@ -1,6 +1,5 @@
 {
   "name": "portfolio-web",
-  "homepage": "https://rug19.github.io/Portfolio_web",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,8 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.7.1",
