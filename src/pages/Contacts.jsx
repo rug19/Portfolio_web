@@ -1,8 +1,14 @@
 import Particle from "../components/Particle";
+import { FaPhone } from "react-icons/fa6";
 
+const textStyle = "text-white font-sans";
+const iconStyle = {
+  size: 25,
+  className: "text-green",
+};
+const inputStyle =
+  "bg-gray-800 bg-opacity-50 text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 font-sans h-10 w-full ";
 export default function Contacts() {
-  const inputStyle =
-    "bg-gray-800 bg-opacity-50 text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 font-sans h-10 w-full ";
   return (
     <section>
       <div
@@ -17,14 +23,14 @@ export default function Contacts() {
       >
         <Particle />
       </div>
-      <div className="h-screen flex justify-center items-center">
-        <div className="rounded-2xl flex justify-center items-center flex-col-reverse lg:flex-row gap-10 lg:gap-20 bg-black bg-opacity-50 p-5 lg:p-10 w-full max-w-7xl">
+      <div className="h-screen flex justify-center items-center ">
+        <div className="rounded-2xl flex  flex-col-reverse lg:flex-row gap-10 lg:gap-20 bg-black bg-opacity-50 p-5 lg:p-10  max-w-7xl">
           <div>
             {" "}
-            <h1 className="text-white text-4xl font-sans">
+            <h1 className=" text-4xl font-sans mb-5 text-green">
               Let&apos;s work together
             </h1>
-            <p className="text-white md:max-w-[600px] lg:max-w-[400px] font-sans text-justify">
+            <p className="text-white md:max-w-[600px] lg:max-w-[400px] font-sans text-justify mb-5">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
             <form action="" method="post">
@@ -54,30 +60,27 @@ export default function Contacts() {
                   }}
                 />
               </div>
-              <select
-                className="bg-gray-800 bg-opacity-50 text-white p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 font-sans h-10 w-full mt-6"
-                id="service"
-              >
-                <option value="" disabled selected>
-                  Select the service
-                </option>
-                <option value="web-development">Web Developer</option>
-                <option value="mobile-development">Mobile Developer</option>
-                <option value="backend-development">Backend Developer</option>
-                <option value="api-integration">API Integration</option>
-                <option value="ecommerce">E-commerce Development</option>
-                <option value="responsive-design">Responsive Design</option>
-                <option value="database-management">Database Management</option>
-                <option value="maintenance-support">
-                  Maintenance & Support
-                </option>
-              </select>
               <textarea
                 className="bg-gray-800 bg-opacity-50 text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 font-sans h-36 w-full mt-6"
                 name=""
                 id=""
               ></textarea>
             </form>
+          </div>
+
+          <div className="flex justify-center items-center">
+            <div className=" flex  items-center gap-5">
+              <div className="flex justify-center items-center  w-12 h-12  bg-gray-800 bg-opacity-50 text-white rounded font-sans">
+                <FaPhone
+                  size={iconStyle.size}
+                  className={iconStyle.className}
+                />
+              </div>
+              <div>
+                <p className={textStyle}>Phone</p>
+                <p className={textStyle}>55 859 91963095</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
