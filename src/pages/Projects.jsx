@@ -7,8 +7,8 @@ import { useState } from "react";
 export default function Projects() {
   const linkStyle =
     "flex items-center justify-center w-11 h-11 border-2 border-green rounded-full text-green hover:bg-green hover:text-primary cursor-pointer";
-  const imgContainer = "relative z-0 w-full max-w-[500px] aspect-[16/9] rounded-lg";
-  const imgStyle = "w-full h-full";
+  const imgContainer = "relative z-0 w-full max-w-[500px]  aspect-[10/7] ";
+  const imgStyle = "w-full h-full rounded-lg";
   const buttonStyle =
     "flex items-center justify-center  lg:w-8 h-7 border-2 border-green text-black bg-green hover:text-primary cursor-pointer";
 
@@ -69,8 +69,8 @@ export default function Projects() {
         <Particle />
       </div>
 
-      <div className="flex justify-center items-center min-h-screen">
-        <div className="rounded-2xl flex justify-center flex-col-reverse lg:flex-row gap-10 lg:gap-20 bg-black bg-opacity-50 p-5 lg:p-10 w-full max-w-7xl">
+      <div className="flex justify-center items-center h-screen">
+        <div className="rounded-2xl flex justify-center items-center flex-col-reverse lg:flex-row gap-10 lg:gap-20 bg-black bg-opacity-50 p-5 lg:p-10 w-full max-w-7xl">
           {/* Text Section */}
           <div className="flex flex-col gap-5">
             <h2 className="text-white text-6xl">{items[indiceAtual].number}</h2>

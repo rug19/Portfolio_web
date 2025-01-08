@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <header className="bg-black  lg:bg-black/0 md:flex  md:justify-between md:items-center  fixed z-50 top-0 left-0 w-full h-20 md:p-5 justify-between items-center p-5 lg:p-10">
       <div className="md:ml-5 lg:ml-20  ">
-        <h2 className="text-2xl  md:text-3xl text-white  font-sans">
+        <h2 className="text-2xl  md:text-3xl text-white  font-sans font-bold">
           RugCosta<span className="text-green">.</span>
         </h2>
         <Drawer />
@@ -41,14 +41,14 @@ export default function Header() {
               : "hover:underline  hover:underline-offset-8 hover:text-green"
           }`}
         >
-          Project
+          Work
         </Link>
         <Link
           to="/contacts"
           className={`${
             location.pathname === "/contacts"
               ? "text-green underline underline-offset-8 "
-              : "hover:underline  hover:underline-offset-8 hover:text-green"
+              : "hover:underline  hover:underline-offset-8 hover:text-green "
           }`}
         >
           Contact

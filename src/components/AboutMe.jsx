@@ -1,7 +1,7 @@
 export default function AboutMe() {
   const textStyle = "text-white font-sans mb-5 font-bold";
   const sectionStyle =
-    "border border-green rounded-lg p-4 grid sm:grid-cols-2 max-w-[600px] lg:max-w-[500px] text-center sm:text-start mb-10 sm:mb-0";
+    "bg-gray-800 bg-opacity-50 rounded-lg p-4 grid sm:grid-cols-2 max-w-[600px] lg:max-w-[500px] text-center sm:text-start mb-10 sm:mb-0";
   const dataLeft = [
     { label: "Name", value: "Ruan Gomes" },
     { label: "Experience", value: "1 year" },
