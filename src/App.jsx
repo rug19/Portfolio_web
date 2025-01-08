@@ -6,7 +6,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/Portfolio_web">
         <Header />
         <AppRoutes />
       </BrowserRouter>
