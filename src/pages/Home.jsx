@@ -36,7 +36,7 @@ export default function Home() {
               <span className="text-green">I'm Ruan Gomes</span>
             </h1>
             <p
-              className=" flex p-4 md:p-0 text-center lg:text-justify  md:items-start  max-w-[700px]
+              className=" flex p-4 md:p-0 text-center lg:text-justify  md:items-start  max-w-[600px]
              font-sans text-white "
             >
               I'm a full-stack developer dedicated to crafting comprehensive

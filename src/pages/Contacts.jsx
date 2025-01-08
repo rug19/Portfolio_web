@@ -26,9 +26,9 @@ export default function Contacts() {
       </div>
       <div className="h-screen flex justify-center items-center  ">
         <div className="rounded-2xl flex  flex-col-reverse lg:flex-row gap-10 lg:gap-20 bg-black bg-opacity-50 p-5 lg:p-10 mt-72 md:mt-0">   
-          <div>
+          <div className="lg:mt-12">
             {" "}
-            <h1 className=" text-4xl font-sans mb-5 text-green font-bold">
+            <h1 className=" text-3xl font-sans mb-4 text-green font-bold">
               Let&apos;s work together
             </h1>
             <p className="text-white md:max-w-[600px] lg:max-w-[400px] font-sans text-justify mb-5">
