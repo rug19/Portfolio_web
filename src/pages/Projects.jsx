@@ -5,11 +5,23 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
+const getTranslateZ = () => {
+  const width = window.innerWidth;
+
+  if (width <= 320) {
+    return "140px"; // Pequenos smartphones
+  } else if (width <= 375) {
+    return "170px"; // Smartphones médios
+  } else if (width <= 425) {
+    return "190px"; // Telas intermediárias
+  } else if (width > 425) {
+    return "250px"; // Tablets
+  }
+};
 export default function Projects() {
   const linkStyle =
     "flex items-center justify-center w-11 h-11 border-2 border-green rounded-full text-green hover:bg-green hover:text-primary cursor-pointer";
   const imgContainer = "relative z- w-full max-w-[500px]  aspect-[10/7] ";
-  const imgStyle = "w-full h-full";
   const buttonStyle =
     "flex items-center justify-center  lg:w-8 h-7 border-2 border-green text-black bg-green hover:text-primary cursor-pointer";
 
@@ -116,15 +128,16 @@ export default function Projects() {
               transition={{ duration: 0.8, ease: "easeInOut" }}
             >
               {items.map((item, index) => (
-                <img
+                <motion.img
                   key={index}
-                  className={imgStyle}
+                  className="absolute w-full h-full"
                   src={item.image}
                   alt={item.alt}
                   style={{
-                    position: "absolute",
                     backfaceVisibility: "hidden",
-                    transform: `rotateY(${index * 90}deg) translateZ(250px)`,
+                    transform: `rotateY(${
+                      index * 90
+                    }deg) translateZ(${getTranslateZ()})`, // Adaptação para cada faixa de largura
                   }}
                 />
               ))}
@@ -132,13 +145,13 @@ export default function Projects() {
             {/* Buttons */}
             <button
               onClick={handleBefore}
-              className={`${buttonStyle} absolute top-1/2  sm:top-1/2 sm:left-0 lg:top-auto  lg:bottom-4 transform -translate-y-1/2 lg:translate-y-14 z-10 lg:left-[85%]`}
+              className={`${buttonStyle} absolute top-1/2  sm:top-1/2 sm:left-0 lg:top-auto  lg:bottom-4 transform -translate-y-1/2 lg:translate-y-14 z-0 lg:left-[85%]`}
             >
               <IoIosArrowBack className="size-5" />
             </button>
             <button
               onClick={handleNext}
-              className={`${buttonStyle} absolute top-1/2 right-0 sm:top-1/2  lg:top-auto lg:right-0 lg:bottom-4 transform -translate-y-1/2 lg:translate-y-14 z-10`}
+              className={`${buttonStyle} absolute top-1/2 right-0 sm:top-1/2  lg:top-auto lg:right-0 lg:bottom-4 transform -translate-y-1/2 lg:translate-y-14 z-0`}
             >
               <IoIosArrowForward className="size-5" />
             </button>
