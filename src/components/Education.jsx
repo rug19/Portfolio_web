@@ -35,11 +35,11 @@ export default function Education() {
   return (
     <section>
       <div>
-        <h1 className="text-white font-sans font-semibold text-4xl lg:text-3xl text-center lg:text-start mb-5">
+        <h1 className="text-white font-sans font-semibold text-4xl lg:text-3xl 2xl:text-4xl text-center lg:text-start mb-5">
           {" "}
           My Education
         </h1>
-        <p className="text-white font-sans text-center lg:text-justify md:max-w-[600px] lg:max-w-[500px]">
+        <p className="text-white font-sans text-center lg:text-justify md:max-w-[600px] lg:max-w-[500px] 2xl:max-w-[600px] 2xl:text-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
           sit at aspernatur ullam eveniet tempore .
         </p>
@@ -51,9 +51,9 @@ export default function Education() {
             className="flex-1 flex flex-col justify-center items-center  sm:items-start  text-center sm:text-start h-32  max-w-[100%] p-4 bg-gray-800 bg-opacity-50 font-bold text-white rounded font-sans"
             key={item.id}
           >
-            <p className="text-green">{item.year}</p>
+            <p className="text-green ">{item.year}</p>
             <h2>{item.title}</h2>
-            <p>{item.type}</p>
+            <p className="text-gray-500">{item.type}</p>
           </article>
         ))}
       </div>

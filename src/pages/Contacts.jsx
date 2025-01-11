@@ -25,13 +25,13 @@ export default function Contacts() {
         <Particle />
       </div>
       <div className="h-screen flex justify-center items-center  ">
-        <div className="rounded-2xl flex  flex-col-reverse lg:flex-row gap-10 lg:gap-20 bg-black bg-opacity-50 p-5 lg:p-10 mt-72 md:mt-0">   
+        <div className="rounded-2xl flex  flex-col-reverse lg:flex-row gap-10 2xl:gap-44 lg:gap-20 bg-black bg-opacity-50 p-5 lg:p-10 mt-72 md:mt-0">   
           <div className="lg:mt-12">
             {" "}
-            <h1 className=" text-3xl font-sans mb-4 text-green font-bold">
+            <h1 className=" text-3xl 2xl:text-5xl font-sans mb-4 text-green font-bold">
               Let&apos;s work together
             </h1>
-            <p className="text-white md:max-w-[600px] lg:max-w-[400px] font-sans text-justify mb-5">
+            <p className="text-white md:max-w-[600px] lg:max-w-[400px] font-sans text-justify mb-5 2xl:text-lg">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
             <form action="" method="post">
@@ -67,7 +67,7 @@ export default function Contacts() {
                 id=""
               ></textarea>
             </form>
-            <button className=" bg-green  text-black tracking-widest  font-bold font-sans  text-xs px-3 py-2 rounded-full mt-2">Send message</button>
+            <button className=" bg-green  text-black tracking-widest  font-extrabold font-sans  text-sm px-3 py-2 rounded-full mt-2 2xl:mt-5">Send message</button>
           </div>
 
           <div className="flex flex-col gap-5 justify-center  items-center mt-20">
