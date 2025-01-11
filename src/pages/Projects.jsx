@@ -73,7 +73,7 @@ export default function Projects() {
         <div className="rounded-2xl flex justify-center items-center flex-col-reverse lg:flex-row gap-10 lg:gap-20 bg-black bg-opacity-50 p-5 lg:p-10 w-full max-w-7xl">
           {/* Text Section */}
           <div className="flex flex-col gap-5">
-            <h2 className="text-white text-6xl">{items[indiceAtual].number}</h2>
+            <h2 className="text-white text-6xl font-sans">{items[indiceAtual].number}</h2>
             <h2 className="font-sans text-4xl font-bold text-white">
               {items[indiceAtual].title}
             </h2>
