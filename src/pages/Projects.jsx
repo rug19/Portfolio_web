@@ -3,12 +3,13 @@ import Particle from "../components/Particle";
 import { BsArrowUpRight } from "react-icons/bs";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   const linkStyle =
     "flex items-center justify-center w-11 h-11 border-2 border-green rounded-full text-green hover:bg-green hover:text-primary cursor-pointer";
-  const imgContainer = "relative z-0 w-full max-w-[500px]  aspect-[10/7] ";
-  const imgStyle = "w-full h-full rounded-lg";
+  const imgContainer = "relative z- w-full max-w-[500px]  aspect-[10/7] ";
+  const imgStyle = "w-full h-full";
   const buttonStyle =
     "flex items-center justify-center  lg:w-8 h-7 border-2 border-green text-black bg-green hover:text-primary cursor-pointer";
 
@@ -73,7 +74,9 @@ export default function Projects() {
         <div className="rounded-2xl flex justify-center items-center flex-col-reverse lg:flex-row gap-10 lg:gap-20 bg-black bg-opacity-50 p-5 lg:p-10 w-full max-w-7xl">
           {/* Text Section */}
           <div className="flex flex-col gap-5">
-            <h2 className="text-white text-6xl font-sans">{items[indiceAtual].number}</h2>
+            <h2 className="text-white text-6xl font-sans">
+              {items[indiceAtual].number}
+            </h2>
             <h2 className="font-sans text-4xl font-bold text-white">
               {items[indiceAtual].title}
             </h2>
@@ -103,11 +106,29 @@ export default function Projects() {
 
           {/* Image Section with Buttons */}
           <div className={imgContainer}>
-            <img
-              className={imgStyle}
-              src={items[indiceAtual].image}
-              alt={items[indiceAtual].alt}
-            />
+            <motion.div
+              className="relative w-full h-full"
+              style={{
+                transformStyle: "preserve-3d",
+                transform: `rotateY(${indiceAtual * -90}deg)`,
+              }}
+              animate={{ rotateY: indiceAtual * -90 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+            >
+              {items.map((item, index) => (
+                <img
+                  key={index}
+                  className={imgStyle}
+                  src={item.image}
+                  alt={item.alt}
+                  style={{
+                    position: "absolute",
+                    backfaceVisibility: "hidden",
+                    transform: `rotateY(${index * 90}deg) translateZ(250px)`,
+                  }}
+                />
+              ))}
+            </motion.div>
             {/* Buttons */}
             <button
               onClick={handleBefore}
