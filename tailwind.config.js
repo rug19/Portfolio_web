@@ -10,7 +10,8 @@ export default {
       },
       screens: {
         sm: "500px",
-        sx: "500px", // Define o breakpoint `sm` como 600px
+        sx: "500px",
+      
       },
       colors: {
         primary: "#1c1c22",

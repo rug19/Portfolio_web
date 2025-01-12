@@ -1,7 +1,7 @@
 export default function AboutMe() {
-  const textStyle = "text-white font-sans mb-5 font-bold";
+  const textStyle = "text-white font-sans mb-5 2xl:text-lg ";
   const sectionStyle =
-    "bg-gray-800 bg-opacity-50 rounded-lg p-4 grid sm:grid-cols-2 max-w-[600px] lg:max-w-[500px] text-center sm:text-start mb-10 sm:mb-0";
+    "bg-gray-800 bg-opacity-50 rounded-lg p-4 grid sm:grid-cols-2 max-w-[600px] lg:max-w-[500px]  2xl:max-w-[600px]  text-center sm:text-start mb-10 sm:mb-0";
   const dataLeft = [
     { label: "Name", value: "Ruan Gomes" },
     { label: "Experience", value: "1 year" },
@@ -23,12 +23,14 @@ export default function AboutMe() {
 
   return (
     <section>
-      <h1 className="text-white text-3xl font-sans font-semibold mb-4 text-center lg:text-start">
+      <h1 className="text-white text-3xl font-sans font-semibold mb-4 text-center lg:text-start 2xl:text-4xl">
         About Me
       </h1>
-      <p className="text-white font-sans max-w-[600px] lg:max-w-[500px] mb-6 text-center lg:text-start">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi fugit
-        accusantium earum? Assumenda rem laborum atque.
+      <p className="text-white tracking-tighter font-sans max-w-[600px] lg:max-w-[500px] 2xl:max-w-[600px] mb-6 text-center lg:text-justify 2xl:text-lg">
+        I am a Systems Analysis and Development student passionate about
+        full-stack development. I have enhanced my skills through academic
+        projects and online courses, and I am eager to apply my knowledge to
+        real-world challenges.
       </p>
       <div className={`${sectionStyle} `}>
         {/* Coluna 1 */}
