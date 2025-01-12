@@ -36,7 +36,7 @@ export default function Resume() {
             <h2 className="text-white font-sans font-bold text-4xl text-center lg:text-start  lg:text-4xl 2xl:text-6xl">
               Why hire me?{" "}
             </h2>
-            <p className="text-white md:max-w-[600px] lg:max-w-[400px] 2xl:max-w-[600px] font-sans  text-center lg:text-justify 2xl:text-lg">
+            <p className="text-white tracking-tight md:max-w-[600px] lg:max-w-[400px] 2xl:max-w-[600px] font-sans  text-center lg:text-justify 2xl:text-lg">
               As a Full Stack Developer, I bring expertise in building scalable,
               user-focused applications with a seamless front-to-back
               integration.
