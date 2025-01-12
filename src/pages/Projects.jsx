@@ -83,7 +83,7 @@ export default function Projects() {
         <Particle />
       </div>
 
-      <div className="flex justify-center items-start md:items-center h-screen mt:mt- ">
+      <div className="flex justify-center items-start md:items-center h-screen mt-10 md:mt-0 ">
         <div className="rounded-2xl flex justify-center items-center flex-col-reverse lg:flex-row gap-10 2xl:gap-44 lg:gap-20 bg-black bg-opacity-50 p-5 lg:p-10 w-full max-w-7xl">
           {/* Text Section */}
           <div className="flex flex-col gap-5">
