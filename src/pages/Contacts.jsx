@@ -8,7 +8,7 @@ const iconStyle = {
   className: "text-green",
 };
 const inputStyle =
-  "bg-gray-800 bg-opacity-50 text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 font-sans h-10 w-full ";
+  "bg-gray-800  text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 font-sans h-15 w-full ";
 export default function Contacts() {
   return (
     <section>
@@ -25,7 +25,7 @@ export default function Contacts() {
         <Particle />
       </div>
       <div className="h-screen flex justify-center items-center  ">
-        <div className="rounded-2xl flex  flex-col-reverse lg:flex-row gap-10 2xl:gap-44 lg:gap-20 bg-black bg-opacity-50 p-5 lg:p-10 mt-12 md:mt-0">   
+        <div className="rounded-2xl flex  flex-col-reverse lg:flex-row gap-10 2xl:gap-44 lg:gap-20 bg-black bg-opacity-50 p-5 lg:p-10 mt-28 md:mt-0">   
           <div className="lg:mt-12">
             {" "}
             <h1 className=" text-3xl 2xl:text-5xl font-sans mb-4 text-green font-bold">
@@ -62,17 +62,17 @@ export default function Contacts() {
                 />
               </div>
               <textarea
-                className="bg-gray-800 bg-opacity-50 text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 font-sans h-36 w-full mt-6"
+                className="bg-gray-800  text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 font-sans h-36 w-full mt-6"
                 name=""
                 id=""
               ></textarea>
             </form>
-            <button className=" bg-green  text-black tracking-widest  font-extrabold font-sans  text-sm px-3 py-2 rounded-full mt-2 2xl:mt-5">Send message</button>
+            <button className=" bg-green  text-black tracking-widest  font-extrabold font-sans  text-base px-3 py-2 rounded-full mt-2 2xl:mt-5 w-40 h-10">Submit</button>
           </div>
 
           <div className="flex flex-col gap-5 justify-center  items-center mt-20">
             <div className=" flex   items-center gap-5 w-full">
-              <div className="flex justify-center items-center  w-12 h-12  bg-gray-800 bg-opacity-50 text-white rounded font-sans">
+              <div className="flex justify-center items-center  w-12 h-12  bg-gray-800  text-white rounded font-sans">
                 <FaPhone {...iconStyle} />
               </div>
               <div>
@@ -81,7 +81,7 @@ export default function Contacts() {
               </div>
             </div>
             <div className=" flex  items-center gap-5 w-full">
-              <div className="flex justify-center items-center  w-12 h-12  bg-gray-800 bg-opacity-50 text-white rounded font-sans">
+              <div className="flex justify-center items-center  w-12 h-12  bg-gray-800  text-white rounded font-sans">
                 <MdEmail {...iconStyle} />
               </div>
               <div>
@@ -90,7 +90,7 @@ export default function Contacts() {
               </div>
             </div>
             <div className=" flex  items-center gap-5 w-full">
-              <div className="flex justify-center items-center  w-12 h-12  bg-gray-800 bg-opacity-50 text-white rounded font-sans">
+              <div className="flex justify-center items-center  w-12 h-12  bg-gray-800  text-white rounded font-sans">
                 <FaLocationDot {...iconStyle} />
               </div>
               <div>

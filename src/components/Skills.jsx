@@ -82,7 +82,7 @@ export default function Skills() {
         <div className=" lg:max-h-52 h-auto  lg:overflow-auto lg:scrollbar-thin lg:scrollbar-thumb-green lg:scrollbar-track-transparent pt-2 grid grid-cols-2  sm:grid-cols-3 md:grid-cols-4  gap-3 sm:mt-5 mb-10 sm:mb-0">
           {icons.map((item) => (
             <div
-              className="  flex justify-center items-center  w-full p-4 bg-gray-800 bg-opacity-50 text-white rounded font-sans"
+              className="  flex justify-center items-center  w-full p-4 bg-gray-800  text-white rounded font-sans"
               key={item.id}
             >
               <div>{item.icon}</div>

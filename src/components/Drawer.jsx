@@ -15,7 +15,7 @@ export default function Drawer() {
     <div className="lg:hidden ">
       {/* Botão para abrir o Drawer */}
       <button
-        className="text-white bg-green-500 p-2 rounded-md fixed top-4 right-4 z-50 "
+        className="text-white  bg-green-500 p-2 rounded-md fixed top-4 right-4 z-50 "
         onClick={toggleDrawer}
       >
         <FontAwesomeIcon
@@ -38,11 +38,11 @@ export default function Drawer() {
           ✕
         </button>
 
-        <nav className="mt-16">
-          <h2 className="pt-10 text-2xl text-center md:text-3xl text-white font-sans">
+        <nav className="mt-16 font-sans font-bold text-lg">
+          <h2 className="pt-10 text-2xl text-center md:text-3xl text-white font-sans font-extrabold">
             RugCosta<span className="text-green">.</span>
           </h2>
-          <ul className="mt-10 text-center space-y-4">
+          <ul className="mt-10 text-center space-y-7">
             <li>
               <Link
                 to="/"
