@@ -71,6 +71,7 @@ export default function Projects() {
     <section className="pt-20 sm:pt-0">
       {/* Background Particles */}
       <div
+      className="bg-white dark:bg-black"
         style={{
           position: "absolute",
           top: 0,
@@ -83,20 +84,20 @@ export default function Projects() {
         <Particle />
       </div>
 
-      <div className="flex justify-center items-start md:items-center h-screen mt-10 md:mt-0 ">
-        <div className="rounded-2xl flex justify-center items-center flex-col-reverse lg:flex-row gap-10 2xl:gap-44 lg:gap-20 bg-black bg-opacity-50 p-5 lg:p-10 w-full max-w-7xl">
+      <div className="  flex justify-center items-start md:items-center h-screen mt-10 md:mt-0 darK:bg-black ">
+        <div className="rounded-2xl flex justify-center items-center flex-col-reverse lg:flex-row gap-10 2xl:gap-44 lg:gap-20 dark:bg-black dark:bg-opacity-50 p-5 lg:p-10 w-full max-w-7xl">
           {/* Text Section */}
           <div className="flex flex-col gap-5">
-            <h2 className="text-green text-7xl  text-outline font-extrabold text-transparent">
+            <h2 className="text-7xl dark:text-white text-outline-dark  font-extrabold text-transparent">
               {items[indiceAtual].number}
             </h2>
-            <h2 className="font-sans text-4xl 2xl:text-5xl font-bold text-white">
+            <h2 className="font-sans text-4xl 2xl:text-5xl font-bold  dark:text-white">
               {items[indiceAtual].title}
             </h2>
-            <p className="text-white md:max-w-[600px] lg:max-w-[400px] font-sans text-justify 2xl:text-lg">
+            <p className="dark:text-white md:max-w-[600px] lg:max-w-[400px] font-sans text-justify 2xl:text-lg">
               {items[indiceAtual].description}
             </p>
-            <p className="text-green font-sans text-[20px] sm:text-2xl border-b-[1px] pb-5">
+            <p className="text-green font-sans text-[20px] sm:text-2xl  border-b border-black dark:border-white pb-5">
               {items[indiceAtual].tecnolohies}
             </p>
             <div className="flex gap-3">

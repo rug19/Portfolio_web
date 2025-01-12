@@ -2,17 +2,19 @@ import Particle from "../components/Particle";
 import { FaPhone, FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
-const textStyle = "text-white font-sans";
+const textStyle2 = "text-green text-lg font-sans font-bold";
+const textStyle = "dark:text-white font-sans";
 const iconStyle = {
   size: 25,
   className: "text-green",
 };
 const inputStyle =
-  "bg-gray-800  text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 font-sans h-15 w-full ";
+  "bg-gray-800 text-black dark:text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 font-sans h-15 w-full ";
 export default function Contacts() {
   return (
     <section>
       <div
+      className="bg-white dark:bg-black"
         style={{
           position: "absolute",
           top: 0,
@@ -25,13 +27,13 @@ export default function Contacts() {
         <Particle />
       </div>
       <div className="h-screen flex justify-center items-center  ">
-        <div className="rounded-2xl flex  flex-col-reverse lg:flex-row gap-10 2xl:gap-44 lg:gap-20 bg-black bg-opacity-50 p-5 lg:p-10 mt-28 md:mt-0">   
+        <div className="rounded-2xl flex  flex-col-reverse lg:flex-row gap-10 2xl:gap-44 lg:gap-20 dark:bg-black dark:bg-opacity-50 p-5 lg:p-10 mt-28 md:mt-0">   
           <div className="lg:mt-12">
             {" "}
             <h1 className=" text-3xl 2xl:text-5xl font-sans mb-4 text-green font-bold">
               Let&apos;s work together
             </h1>
-            <p className="text-white md:max-w-[600px] lg:max-w-[400px] font-sans text-justify mb-5 2xl:text-lg">
+            <p className="dark:text-white md:max-w-[600px] lg:max-w-[400px] font-sans text-justify mb-5 2xl:text-lg">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
             <form action="" method="post">
@@ -76,7 +78,7 @@ export default function Contacts() {
                 <FaPhone {...iconStyle} />
               </div>
               <div>
-                <p className={textStyle}>Phone</p>
+                <p className={textStyle2}>Phone</p>
                 <p className={textStyle}>55 859 91963095</p>
               </div>
             </div>
@@ -85,7 +87,7 @@ export default function Contacts() {
                 <MdEmail {...iconStyle} />
               </div>
               <div>
-                <p className={textStyle}>Email</p>
+                <p className={textStyle2}>Email</p>
                 <p className={textStyle}>rugcosta1234@gmail.com</p>
               </div>
             </div>
@@ -94,7 +96,7 @@ export default function Contacts() {
                 <FaLocationDot {...iconStyle} />
               </div>
               <div>
-                <p className={textStyle}>Adress</p>
+                <p className={textStyle2}>Adress</p>
                 <p className={textStyle}>Ceara, Brazil</p>
               </div>
             </div>

@@ -12,8 +12,8 @@ body {
 }
 
 body {
-  font-family: Arial, sans-serif; /* Fonte padrão */
-  background-color: black; /* Fundo claro */
+  font-family: Arial, sans-serif;
+  
 }
 
 body::-webkit-scrollbar {
@@ -33,6 +33,11 @@ canvas {
 }
 
 .text-outline {
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 2px #fff;
+  
+}
+
+.text-outline-dark {
+  -webkit-text-stroke: 2px #000;
   
 }

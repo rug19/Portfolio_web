@@ -2,6 +2,7 @@ import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons/faBarsStagger
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Drawer() {
   const location = useLocation();
@@ -27,7 +28,7 @@ export default function Drawer() {
 
       {/* Drawer */}
       <div
-        className={`fixed top-0 right-0 w-64 md:w-96 h-full bg-black text-white font-sans transform ${
+        className={`fixed top-0 right-0 w-64 md:w-96 h-full bg-white dark:bg-black text-white font-sans transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out z-40`}
       >
@@ -39,10 +40,10 @@ export default function Drawer() {
         </button>
 
         <nav className="mt-16 font-sans font-bold text-lg">
-          <h2 className="pt-10 text-2xl text-center md:text-3xl text-white font-sans font-extrabold">
+          <h2 className="pt-10 text-2xl text-center md:text-3xl text-black dark:text-white font-sans font-extrabold">
             RugCosta<span className="text-green">.</span>
           </h2>
-          <ul className="mt-10 text-center space-y-7">
+          <ul className="mt-10 text-center space-y-7 text-black dark:text-white">
             <li>
               <Link
                 to="/"
@@ -94,6 +95,9 @@ export default function Drawer() {
               >
                 Contact
               </Link>
+            </li>
+            <li>
+              <ThemeToggle />
             </li>
           </ul>
         </nav>

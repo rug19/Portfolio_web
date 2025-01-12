@@ -23,13 +23,15 @@ export default function Home() {
     <>
       {/* Fundo de partículas */}
       <div
+      className="bg-white dark:bg-black"
         style={{
           position: "fixed",
           top: 0,
           left: 0,
           width: "100%",
           height: "100%",
-          zIndex: -1, // Faz com que o fundo fique atrás do conteúdo
+          zIndex:-1,
+           // Faz com que o fundo fique atrás do conteúdo
         }}
       >
         <Particle />
@@ -39,7 +41,7 @@ export default function Home() {
       <div id="home" className=" h-screen flex justify-center items-center">
         <div className="flex flex-col-reverse justify-around flex-justify lg:flex-row items-center lg:gap-20 2xl:flex-row 2xl:gap-28">
           <div className=" flex flex-col  lg:gap-7 md:flexitems-center">
-            <h1 className="text-4xl md:text-6xl 2xl:text-8xl font-sans text-white max-[400px]:text-3xl text-center lg:text-left leading-tight md:mb-8 lg:mb-0">
+            <h1 className="text-4xl md:text-6xl 2xl:text-8xl font-sans text-black dark:text-white max-[400px]:text-3xl text-center lg:text-left leading-tight md:mb-8 lg:mb-0">
               Nice to meet you!
               <br />
               <span className="text-green">{text}</span>
@@ -50,14 +52,14 @@ export default function Home() {
             </h1>
             <p
               className=" flex p-4 md:p-0 text-center lg:text-justify  md:items-start  max-w-[600px] 2xl:max-w-[730px]
-             font-sans text-white 2xl:text-lg md:mb-8 lg:mb-0"
+             font-sans text-slate dark:text-white 2xl:text-lg md:mb-8 lg:mb-0"
             >
               I'm a full-stack developer dedicated to crafting comprehensive
               solutions for digital challenges. From user interface to backend,
               I'm constantly seeking ways to make technology more accessible and
               efficient.
             </p>
-            <div className="flex flex-col lg:flex-row gap-5 items-center ">
+            <div className="flex flex-col lg:flex-row gap-5 items-center z-[5] ">
               <button className=" border-2 border-green  text-green tracking-widest  font-semibold font-sans  text-xs px-3 py-2 rounded-full hover:bg-green hover:text-primary md:mb-2 lg:mb-0">
                 DOWNLOAD CV{" "}
                 <span>
