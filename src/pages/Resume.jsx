@@ -30,7 +30,7 @@ export default function Resume() {
         <Particle />
       </div>
       {/* Container */}
-      <div className="h-screen sm:h-auto lg:h-screen flex  justify-center items-center mt-32 lg:mt-0">
+      <div className="h-screen sm:h-auto lg:h-screen flex  justify-center items-center mt-20 lg:mt-0">
         <div className="h-screen sm:h-auto lg:h-auto rounded-2xl  flex flex-col lg:flex-row gap-10 lg:gap-20 bg-black bg-opacity-70 p-5   lg:p-10 w-1/1 2xl:gap-x-44">
           <div className="flex flex-col gap-5">
             <h2 className="text-white font-sans font-bold text-4xl text-center lg:text-start  lg:text-4xl 2xl:text-6xl">

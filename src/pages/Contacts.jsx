@@ -24,8 +24,8 @@ export default function Contacts() {
       >
         <Particle />
       </div>
-      <div className="h-screen flex justify-center items-center  ">
-        <div className="rounded-2xl flex  flex-col-reverse lg:flex-row gap-10 2xl:gap-44 lg:gap-20 bg-black bg-opacity-50 p-5 lg:p-10 mt-72 md:mt-0">   
+      <div className="h-screen flex justify-start items-center  ">
+        <div className="rounded-2xl flex  flex-col-reverse lg:flex-row gap-10 2xl:gap-44 lg:gap-20 bg-black bg-opacity-50 p-5 lg:p-10 mt-10 md:mt-0">   
           <div className="lg:mt-12">
             {" "}
             <h1 className=" text-3xl 2xl:text-5xl font-sans mb-4 text-green font-bold">
