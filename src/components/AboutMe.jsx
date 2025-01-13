@@ -1,17 +1,19 @@
+import { useTranslation } from "react-i18next";
 export default function AboutMe() {
+  const { t } = useTranslation();
   const textStyle = "text-white font-sans mb-5 2xl:text-lg ";
   const sectionStyle =
-    "bg-gray-800  rounded-lg p-4 grid sm:grid-cols-2 max-w-[600px] lg:max-w-[500px]  2xl:max-w-[600px]  text-center sm:text-start mb-10 sm:mb-0";
+    "bg-gray-800  rounded-lg p-4 grid sm:grid-cols-2 max-w-[600px] lg:max-w-[600px]  2xl:max-w-[600px]  text-center sm:text-start mb-10 sm:mb-0";
   const dataLeft = [
-    { label: "Name", value: "Ruan Gomes" },
-    { label: "Experience", value: "1 year" },
-    { label: "Nationality", value: "Brazilian" },
-    { label: "Freelance", value: "Available" },
+    { label: t("AboutMe.name"), value: "Ruan Gomes" },
+    { label: t("AboutMe.experience"), value: t("AboutMe.ano") },
+    { label: t("AboutMe.nationality"), value: t("AboutMe.brazilian") },
+    { label: t("AboutMe.freelance"), value: t("AboutMe.available") },
   ];
   const dataRight = [
-    { label: "Phone", value: "(+55) 85991963095" },
-    { label: "Email", value: "rugdev039@gmail.com" },
-    { label: "Languages", value: "Portuguese, English" },
+    { label: t("AboutMe.phone"), value: "(+55) 85 9 9196-3095" },
+    { label: t("AboutMe.email"), value: "rugdev039@gmail.com" },
+    { label: t("AboutMe.languages"), value: t("AboutMe.language") },
   ];
 
   const InfoRow = ({ label, value }) => (
@@ -24,13 +26,10 @@ export default function AboutMe() {
   return (
     <section>
       <h1 className="dark:text-white text-3xl font-sans font-semibold mb-4 text-center lg:text-start 2xl:text-4xl">
-        About Me
+        {t("AboutMe.title")}
       </h1>
-      <p className="dark:text-white tracking-tighter font-sans max-w-[600px] lg:max-w-6500px] 2xl:max-w-[600px] mb-6 text-center lg:text-justify 2xl:text-lg">
-        I am a Systems Analysis and Development student passionate about
-        full-stack development. I have enhanced my skills through academic
-        projects and online courses, and I am eager to apply my knowledge to
-        real-world challenges.
+      <p className="dark:text-white tracking-tighter font-sans max-w-[600px] lg:max-w-600px] 2xl:max-w-[600px] mb-6 text-center lg:text-justify 2xl:text-lg">
+        {t("AboutMe.description")}
       </p>
       <div className={`${sectionStyle} `}>
         {/* Coluna 1 */}

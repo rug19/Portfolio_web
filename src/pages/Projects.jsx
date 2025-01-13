@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next";
 import { FaGithub } from "react-icons/fa";
 import Particle from "../components/Particle";
 import { BsArrowUpRight } from "react-icons/bs";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useState } from "react";
 import { motion } from "framer-motion";
+
 
 const getTranslateZ = () => {
   const width = window.innerWidth;
@@ -19,6 +21,7 @@ const getTranslateZ = () => {
   }
 };
 export default function Projects() {
+  const { t } = useTranslation();
   const [isAnimating, setIsAnimating] = useState(false);
   const linkStyle =
     "flex items-center justify-center w-11 h-11 border-2 border-green rounded-full text-green hover:bg-green hover:text-primary cursor-pointer";
@@ -30,9 +33,8 @@ export default function Projects() {
     {
       id: 1,
       number: "01",
-      title: "Frontend Project",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum",
+      title: t("Projects.title1"),
+      description: t("Projects.description1"),
       tecnolohies: "HTML, CSS3, JavaScript",
       liveUrl:
         "https://rug19.github.io/huddle-landing-page-with-curved-sections-master/",
@@ -44,9 +46,9 @@ export default function Projects() {
     {
       id: 2,
       number: "02",
-      title: "Frontend Project",
+      title: t("Projects.title2"),
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum",
+        t("Projects.description2"),
       tecnolohies: "React, JavaScript, CSS",
       liveUrl:
         "https://rug19.github.io/huddle-landing-page-with-curved-sections-master/",
@@ -71,7 +73,7 @@ export default function Projects() {
     <section className="pt-20 sm:pt-0">
       {/* Background Particles */}
       <div
-      className="bg-white dark:bg-black"
+        className="bg-white dark:bg-black"
         style={{
           position: "absolute",
           top: 0,
@@ -91,10 +93,10 @@ export default function Projects() {
             <h2 className="text-7xl dark:text-white text-outline-dark  font-extrabold text-transparent">
               {items[indiceAtual].number}
             </h2>
-            <h2 className="font-sans text-4xl 2xl:text-5xl font-bold  dark:text-white">
+            <h2 className="font-sans text-4xl 2xl:text-5xl font-bold tracking-tighter lg:max-w-[400px] dark:text-white">
               {items[indiceAtual].title}
             </h2>
-            <p className="dark:text-white md:max-w-[600px] lg:max-w-[400px] font-sans text-justify 2xl:text-lg">
+            <p className="dark:text-white tracking-tighter md:max-w-[600px] lg:max-w-[400px] font-sans text-justify 2xl:text-lg">
               {items[indiceAtual].description}
             </p>
             <p className="text-green font-sans text-[20px] sm:text-2xl  border-b border-black dark:border-white pb-5">

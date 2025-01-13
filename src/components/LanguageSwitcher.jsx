@@ -21,7 +21,7 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <button onClick={toggleLanguage} aria-label="Toggle Language">
+    <button onClick={toggleLanguage} aria-label="Toggle Language" >
       {language === "en" ? "🇺🇸" : "🇧🇷"} 
     </button>
   );

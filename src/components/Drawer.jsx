@@ -22,7 +22,7 @@ export default function Drawer() {
       >
         <FontAwesomeIcon
           className="text-green"
-          size="lg"
+          size="xl"
           icon={faBarsStaggered}
         />
       </button>

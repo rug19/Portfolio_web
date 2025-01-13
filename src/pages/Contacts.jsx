@@ -1,7 +1,7 @@
 import Particle from "../components/Particle";
 import { FaPhone, FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
-
+import { useTranslation } from "react-i18next";
 const textStyle2 = "text-green text-lg font-sans font-bold";
 const textStyle = "dark:text-white font-sans";
 const iconStyle = {
@@ -11,10 +11,11 @@ const iconStyle = {
 const inputStyle =
   "bg-gray-800 text-black dark:text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 font-sans h-15 w-full ";
 export default function Contacts() {
+  const { t } = useTranslation();
   return (
     <section>
       <div
-      className="bg-white dark:bg-black"
+        className="bg-white dark:bg-black"
         style={{
           position: "absolute",
           top: 0,
@@ -27,36 +28,36 @@ export default function Contacts() {
         <Particle />
       </div>
       <div className="h-screen flex justify-center items-center  ">
-        <div className="rounded-2xl flex  flex-col-reverse lg:flex-row gap-10 2xl:gap-44 lg:gap-20 dark:bg-black dark:bg-opacity-50 p-5 lg:p-10 mt-28 md:mt-0">   
+        <div className="rounded-2xl flex  flex-col-reverse lg:flex-row gap-10 2xl:gap-44 lg:gap-20 dark:bg-black dark:bg-opacity-50 p-5 lg:p-10 mt-48 md:mt-0">
           <div className="lg:mt-12">
             {" "}
-            <h1 className=" text-3xl 2xl:text-5xl font-sans mb-4 text-green font-bold">
-              Let&apos;s work together
+            <h1 className=" text-3xl text-center md:text-justify 2xl:text-5xl font-sans mb-9 md:mb-4 dark:text-white  font-bold ">
+              {t("Contact.title")}
             </h1>
             <p className="dark:text-white md:max-w-[600px] lg:max-w-[400px] font-sans text-justify mb-5 2xl:text-lg">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              {t("Contact.subtitle")}
             </p>
             <form action="" method="post">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <input
                   className={inputStyle}
                   type="firsnamet"
-                  placeholder="Firstname"
+                  placeholder={t("Contact.firstName")}
                 />
                 <input
                   className={inputStyle}
                   type="lastname"
-                  placeholder="Lastname"
+                  placeholder={t("Contact.lastName")}
                 />
                 <input
                   className={inputStyle}
                   type="email"
-                  placeholder="Email address"
+                  placeholder={t("Contact.email")}
                 />
                 <input
                   className={inputStyle}
                   type="tel"
-                  placeholder="Phone number"
+                  placeholder={t("Contact.phone")}
                   pattern="[0-9]"
                   onInput={(e) => {
                     e.target.value = e.target.value.replace(/[^0-9]/g, "");
@@ -69,7 +70,9 @@ export default function Contacts() {
                 id=""
               ></textarea>
             </form>
-            <button className=" bg-green  text-black tracking-widest  font-extrabold font-sans  text-base px-3 py-2 rounded-full mt-2 2xl:mt-5 w-40 h-10">Submit</button>
+            <button className=" bg-green  text-black tracking-widest  font-extrabold font-sans  text-base px-3 py-2 rounded-full mt-2 2xl:mt-5 w-40 h-10">
+              {t("Contact.button")}
+            </button>
           </div>
 
           <div className="flex flex-col gap-5 justify-center  items-center mt-20">
@@ -78,7 +81,7 @@ export default function Contacts() {
                 <FaPhone {...iconStyle} />
               </div>
               <div>
-                <p className={textStyle2}>Phone</p>
+                <p className={textStyle2}>{t('Contact.phone')}</p>
                 <p className={textStyle}>55 859 91963095</p>
               </div>
             </div>
@@ -87,7 +90,7 @@ export default function Contacts() {
                 <MdEmail {...iconStyle} />
               </div>
               <div>
-                <p className={textStyle2}>Email</p>
+                <p className={textStyle2}>{t('Contact.email')}</p>
                 <p className={textStyle}>rugcosta1234@gmail.com</p>
               </div>
             </div>
@@ -96,8 +99,8 @@ export default function Contacts() {
                 <FaLocationDot {...iconStyle} />
               </div>
               <div>
-                <p className={textStyle2}>Adress</p>
-                <p className={textStyle}>Ceara, Brazil</p>
+                <p className={textStyle2}>{t('Contact.address')}</p>
+                <p className={textStyle}>{t('Contact.city')}</p>
               </div>
             </div>
           </div>
