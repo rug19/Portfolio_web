@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Drawer() {
   const location = useLocation();
@@ -98,6 +99,10 @@ export default function Drawer() {
             </li>
             <li>
               <ThemeToggle />
+            </li>
+            <li>
+              {" "}
+              <LanguageSwitcher />
             </li>
           </ul>
         </nav>

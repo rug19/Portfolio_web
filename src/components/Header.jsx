@@ -1,8 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
 import Drawer from "./Drawer";
 import ThemeToggle from "./ThemeToggle";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
+  const { t } = useTranslation();
   const location = useLocation();
 
   return (
@@ -22,7 +25,7 @@ export default function Header() {
               : "hover:underline  hover:underline-offset-8 hover:text-green"
           }`}
         >
-          Home
+          {t("Header.home")}
         </Link>
         <Link
           to="/resume"
@@ -32,7 +35,7 @@ export default function Header() {
               : "hover:underline  hover:underline-offset-8 hover:text-green"
           }`}
         >
-          Resume
+          {t("Header.about")}
         </Link>
         <Link
           to="/projects"
@@ -42,7 +45,7 @@ export default function Header() {
               : "hover:underline  hover:underline-offset-8 hover:text-green"
           }`}
         >
-          Work
+         {t("Header.projects")}
         </Link>
         <Link
           to="/contacts"
@@ -52,9 +55,10 @@ export default function Header() {
               : "hover:underline  hover:underline-offset-8 hover:text-green "
           }`}
         >
-          Contact
+          {t("Header.contact")}
         </Link>
         <ThemeToggle />
+        <LanguageSwitcher />
       </nav>
     </header>
   );

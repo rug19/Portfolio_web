@@ -72,7 +72,7 @@ export default function Skills() {
           <h1 className="text-black dark:text-white font-sans font-semibold text-center lg:text-start  text-4xl lg:text-3xl mb-5 2xl:text-4xl">
             My Skills
           </h1>
-          <p className="dark:text-white  font-sans lg:max-w-[500px] md:max-w-[600px] 2xl:max-w-[600px] text-center lg:text-justify 2xl:text-lg">
+          <p className="dark:text-white  font-sans lg:max-w-[600px] md:max-w-[600px] 2xl:max-w-[600px] text-center lg:text-justify 2xl:text-lg">
             I have developed a diverse set of skills in front-end and back-end
             development, committed to delivering high-quality solutions for
             users and businesses.

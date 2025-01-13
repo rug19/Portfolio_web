@@ -26,7 +26,7 @@ export default function AboutMe() {
       <h1 className="dark:text-white text-3xl font-sans font-semibold mb-4 text-center lg:text-start 2xl:text-4xl">
         About Me
       </h1>
-      <p className="dark:text-white tracking-tighter font-sans max-w-[600px] lg:max-w-[500px] 2xl:max-w-[600px] mb-6 text-center lg:text-justify 2xl:text-lg">
+      <p className="dark:text-white tracking-tighter font-sans max-w-[600px] lg:max-w-6500px] 2xl:max-w-[600px] mb-6 text-center lg:text-justify 2xl:text-lg">
         I am a Systems Analysis and Development student passionate about
         full-stack development. I have enhanced my skills through academic
         projects and online courses, and I am eager to apply my knowledge to

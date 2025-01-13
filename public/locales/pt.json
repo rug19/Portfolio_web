@@ -1,0 +1,25 @@
+{
+  "Header.home": "Início",
+  "Header.about": "Sobre",
+  "Header.projects": "Projetos",
+  "Header.contact": "Contato",
+  "Home.title": "Prazer em conhecê-lo!",
+  "Home.subtitle": "Eu sou Ruan Gomes",
+  "Home.description": "Sou um desenvolvedor full-stack dedicado a criar soluções abrangentes para desafios digitais. Desde a interface do usuário até o backend, estou constantemente buscando maneiras de tornar a tecnologia mais acessível e eficiente.",
+  "Home.button": "Baixar CV",
+  "About.title": "Por que me contratar?",
+  "About.description": "Como desenvolvedor Full Stack, trago experiência na criação de aplicativos escaláveis ​​e focados no usuário, com integração perfeita do início ao fim.",
+  "About.buttonEducation": "Formação",
+  "About.buttonSkills": "Habilidades",
+  "About.buttonAboutMe": "Sobre mim",
+  "About.myEducation": "Minha formação",
+  "About.myEducationDescription": "Aqui está um resumo da minha formação educacional, incluindo títulos acadêmicos, cursos on-line e certificações.",
+  "About.myEducationAno": "2023 - Em andamento",
+  "About.myEducationTitle1": "Desenvolvedor Web FullStack", 
+  "About.myEducationTitle2": "Análise e desenvolvimento de sistemas",
+  "About.myEducationTitle3": "Curso de lógica de programação",
+  "About.myEducationTitle4": "Curso de lógica orientada a objetos",
+  "About.myEducationTitle5": "Curso de aplicações e arquiteturas",
+  "About.myEducationSubtitle1": "Universidade Estácio de Sá"
+
+}
