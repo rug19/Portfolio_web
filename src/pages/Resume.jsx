@@ -7,6 +7,9 @@ import { useTranslation } from "react-i18next";
 
 export default function Resume() {
   const { t } = useTranslation();
+  const selectedButtonClasses =
+    "bg-green text-black dark:text-white tracking-widest font-bold font-sans px-3 py-2 rounded-xl w-60 2xl:text-lg z-[5]";
+
   const buttonClasses =
     "border-2 border-green text-black dark:text-white  tracking-widest font-bold font-sans px-3 py-2 rounded-xl w-60  hover:bg-green hover:text-black 2xl:text-lg z-[5]";
   // Object the maps the components
@@ -46,19 +49,19 @@ export default function Resume() {
             <div className="flex justify-center items-center lg:flex lg:items-start flex-col gap-5">
               <button
                 onClick={() => setSelectPage("education")}
-                className={buttonClasses}
+                className={selectPage === "education" ? selectedButtonClasses : buttonClasses}
               >
                 {t("About.buttonEducation")}
               </button>
               <button
                 onClick={() => setSelectPage("skills")}
-                className={buttonClasses}
+                className={selectPage === "skills" ? selectedButtonClasses : buttonClasses}
               >
                 {t("About.buttonSkills")}
               </button>
               <button
                 onClick={() => setSelectPage("aboutMe")}
-                className={buttonClasses}
+                className={selectPage === "aboutMe" ? selectedButtonClasses : buttonClasses}
               >
               {t("About.buttonAboutMe")}
               </button>

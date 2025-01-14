@@ -71,7 +71,7 @@ export default function Drawer() {
                 }`}
                 onClick={toggleDrawer}
               >
-                Resume
+                About
               </Link>
             </li>
             <li>
