@@ -72,7 +72,7 @@ export default function Home() {
           </div>
 
           {/* Img container */}
-          <div className=" mt-8 md:mt-5 md:mb-14 lg:mb-0 ">
+          <div className=" mt-10 md:mt-5 md:mb-14 lg:mb-0 lg:mt-0 ">
             <motion.img
               className="w-72  h-72 sm:w-72 sm:h-72 md:w-96 md:h-96 lg:w-80 lg:h-80 2xl:w-96 2xl:h-96 object-cover rounded-full"
               src="../../Design sem nome (1).png"

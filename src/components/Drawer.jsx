@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function Drawer() {
   const location = useLocation();
@@ -16,16 +17,25 @@ export default function Drawer() {
   return (
     <div className="lg:hidden ">
       {/* Botão para abrir o Drawer */}
-      <button
-        className="text-white  bg-green-500 p-2 rounded-md fixed top-4 right-4 z-50 "
-        onClick={toggleDrawer}
-      >
-        <FontAwesomeIcon
-          className="text-green"
-          size="xl"
-          icon={faBarsStaggered}
-        />
-      </button>
+
+      <div className="fixed top-4 right-4 z-50 flex items-center gap-5">
+        {!isOpen && (
+          <>
+            <ThemeToggle />
+            <LanguageSwitcher />
+          </>
+        )}
+        <button
+          className="text-white bg-green-500 p-2 rounded-md"
+          onClick={toggleDrawer}
+        >
+          <FontAwesomeIcon
+            className="text-green"
+            size="xl"
+            icon={isOpen ? faXmark : faBarsStaggered}
+          />
+        </button>
+      </div>
 
       {/* Drawer */}
       <div
@@ -33,13 +43,6 @@ export default function Drawer() {
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out z-40`}
       >
-        <button
-          className="text-white hover:text-white p-2 absolute top-4 left-4"
-          onClick={toggleDrawer}
-        >
-          ✕
-        </button>
-
         <nav className="mt-16 font-sans font-bold text-lg">
           <h2 className="pt-10 text-2xl text-center md:text-3xl text-black dark:text-white font-sans font-extrabold">
             RugCosta<span className="text-green">.</span>
@@ -96,13 +99,6 @@ export default function Drawer() {
               >
                 Contact
               </Link>
-            </li>
-            <li>
-              <ThemeToggle />
-            </li>
-            <li>
-              {" "}
-              <LanguageSwitcher />
             </li>
           </ul>
         </nav>

@@ -31,7 +31,7 @@ export default function Contacts() {
         <div className="rounded-2xl flex  flex-col-reverse lg:flex-row gap-10 2xl:gap-44 lg:gap-20 dark:bg-black dark:bg-opacity-50 p-5 lg:p-10 mt-48 md:mt-0">
           <div className="lg:mt-12">
             {" "}
-            <h1 className=" text-3xl text-center md:text-justify 2xl:text-5xl font-sans mb-9 md:mb-4 dark:text-white  font-bold ">
+            <h1 className=" text-3xl text-center md:text-justify 2xl:text-5xl font-sans mb-9 md:mb-4 dark:text-green  font-bold ">
               {t("Contact.title")}
             </h1>
             <p className="dark:text-white md:max-w-[600px] lg:max-w-[400px] font-sans text-justify mb-5 2xl:text-lg">

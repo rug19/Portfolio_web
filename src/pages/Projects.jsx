@@ -24,7 +24,7 @@ export default function Projects() {
   const { t } = useTranslation();
   const [isAnimating, setIsAnimating] = useState(false);
   const linkStyle =
-    "flex items-center justify-center w-11 h-11 border-2 border-green rounded-full text-green hover:bg-green hover:text-primary cursor-pointer";
+    "flex items-center justify-center w-14 h-14 lg:w-11 lg:h-11 border-2 border-green rounded-full text-green hover:bg-green hover:text-primary cursor-pointer";
   const imgContainer = "relative z- w-full max-w-[500px]  aspect-[10/7] ";
   const buttonStyle =
     "flex items-center justify-center  lg:w-8 h-7 border-2 border-green text-black bg-green hover:text-primary cursor-pointer";
@@ -99,7 +99,7 @@ export default function Projects() {
             <p className="dark:text-white tracking-tighter md:max-w-[600px] lg:max-w-[400px] font-sans text-justify 2xl:text-lg">
               {items[indiceAtual].description}
             </p>
-            <p className="text-green font-sans text-[20px] sm:text-2xl  border-b border-black dark:border-white pb-5">
+            <p className="text-green font-sans text-[20px] sm:text-2xl font-bold lg:font-normal border-b-2 lg:border-b  border-black dark:border-white pb-5">
               {items[indiceAtual].tecnolohies}
             </p>
             <div className="flex gap-3">
@@ -108,14 +108,14 @@ export default function Projects() {
                 target="_blank"
                 href={items[indiceAtual].liveUrl}
               >
-                <BsArrowUpRight className="size-6" />
+                <BsArrowUpRight className="lg:size-6 size-8" />
               </a>
               <a
                 className={linkStyle}
                 target="_blank"
                 href={items[indiceAtual].gitUrl}
               >
-                <FaGithub className="size-6" />
+                <FaGithub className="lg:size-6 size-8" />
               </a>
             </div>
           </div>

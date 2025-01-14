@@ -1,8 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import Drawer from "./Drawer";
+import { useTranslation } from "react-i18next";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { useTranslation } from "react-i18next";
 
 export default function Header() {
   const { t } = useTranslation();
@@ -45,7 +45,7 @@ export default function Header() {
               : "hover:underline  hover:underline-offset-8 hover:text-green"
           }`}
         >
-         {t("Header.projects")}
+          {t("Header.projects")}
         </Link>
         <Link
           to="/contacts"
