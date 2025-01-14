@@ -16,7 +16,7 @@ export default function Header() {
         </h2>
         <Drawer />
       </div>
-      <nav className="hidden lg:flex md:mr-0  font-semibold mr-20 gap-10 font-sans text-black dark:text-white pr-20 text-lg">
+      <nav className="hidden lg:flex md:mr-0 items-center  font-semibold mr-20 gap-10 font-sans text-black dark:text-white pr-20 text-lg">
         <Link
           to="/"
           className={` ${

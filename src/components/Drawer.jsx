@@ -18,7 +18,7 @@ export default function Drawer() {
     <div className="lg:hidden ">
       {/* Botão para abrir o Drawer */}
 
-      <div className="fixed top-4 right-4 z-50 flex items-center gap-5">
+      <div className="fixed top-4 right-4 z-50 flex  gap-5">
         {!isOpen && (
           <>
             <ThemeToggle />
