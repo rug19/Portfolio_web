@@ -2,6 +2,8 @@ import Particle from "../components/Particle";
 import { FaPhone, FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 const textStyle2 = "text-green text-lg font-sans font-bold";
 const textStyle = "dark:text-white font-sans";
 const iconStyle = {
@@ -11,6 +13,55 @@ const iconStyle = {
 const inputStyle =
   "bg-gray-800 text-black dark:text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 font-sans h-15 w-full ";
 export default function Contacts() {
+  const [name, setName] = useState();
+  const [lastName, setLastName] = useState();
+  const [email, setEmail] = useState();
+  const [phone, setPhone] = useState();
+  const [message, setMessage] = useState();
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    if (
+      name === "" ||
+      lastName === "" ||
+      email === "" ||
+      phone === "" ||
+      message === ""
+    ) {
+      alert("Preencha todos os campos");
+      return;
+    }
+
+    const templateParams = {
+      from_name: name,
+      lastName: lastName,
+      email: email,
+      phone: phone,
+      message: message,
+    };
+    emailjs
+      .sendForm(
+        "service_euzh8to",
+        "template_frb5eq4",
+        templateParams,
+        "ercJ2O5qmcn3slP2U"
+      )
+      .then(
+        (response) => {
+          console.log("Email enviado", response.status, response.text);
+          setName("");
+          setLastName("");
+          setEmail("");
+          setPhone("");
+          setMessage("");
+        },
+        (err) => {
+          console.log("Erro", err);
+        }
+      );
+  }
+
   const { t } = useTranslation();
   return (
     <section>
@@ -37,26 +88,34 @@ export default function Contacts() {
             <p className="dark:text-white md:max-w-[600px] lg:max-w-[400px] font-sans text-justify mb-5 2xl:text-lg">
               {t("Contact.subtitle")}
             </p>
-            <form action="" method="post">
+            <form onSubmit={sendEmail}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <input
                   className={inputStyle}
-                  type="firsnamet"
+                  type="firstname"
                   placeholder={t("Contact.firstName")}
+                  onChange={(e) => setName(e.target.value)}
+                  value={name}
                 />
                 <input
                   className={inputStyle}
                   type="lastname"
                   placeholder={t("Contact.lastName")}
+                  onChange={(e) => setLastName(e.target.value)}
+                  value={lastName}
                 />
                 <input
                   className={inputStyle}
                   type="email"
                   placeholder={t("Contact.email")}
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
                 />
                 <input
                   className={inputStyle}
                   type="tel"
+                  onChange={(e) => setPhone(e.target.value)}
+                  value={phone}
                   placeholder={t("Contact.phone")}
                   pattern="[0-9]"
                   onInput={(e) => {
@@ -68,11 +127,16 @@ export default function Contacts() {
                 className="bg-gray-800  text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 font-sans h-36 w-full mt-6"
                 name=""
                 id=""
+                onChange={(e) => setMessage(e.target.value)}
+                value={message}
               ></textarea>
+              <button
+                type="Submit"
+                className=" bg-green  text-black tracking-widest  font-extrabold font-sans  text-base px-3 py-2 rounded-full mt-2 2xl:mt-5 w-40 h-10"
+              >
+                {t("Contact.button")}
+              </button>
             </form>
-            <button className=" bg-green  text-black tracking-widest  font-extrabold font-sans  text-base px-3 py-2 rounded-full mt-2 2xl:mt-5 w-40 h-10">
-              {t("Contact.button")}
-            </button>
           </div>
 
           <div className="flex flex-col gap-5 justify-center  items-center mt-20">
@@ -81,7 +145,7 @@ export default function Contacts() {
                 <FaPhone {...iconStyle} />
               </div>
               <div>
-                <p className={textStyle2}>{t('Contact.phone')}</p>
+                <p className={textStyle2}>{t("Contact.phone")}</p>
                 <p className={textStyle}>55 859 91963095</p>
               </div>
             </div>
@@ -90,7 +154,7 @@ export default function Contacts() {
                 <MdEmail {...iconStyle} />
               </div>
               <div>
-                <p className={textStyle2}>{t('Contact.email')}</p>
+                <p className={textStyle2}>{t("Contact.email")}</p>
                 <p className={textStyle}>rugcosta1234@gmail.com</p>
               </div>
             </div>
@@ -99,8 +163,8 @@ export default function Contacts() {
                 <FaLocationDot {...iconStyle} />
               </div>
               <div>
-                <p className={textStyle2}>{t('Contact.address')}</p>
-                <p className={textStyle}>{t('Contact.city')}</p>
+                <p className={textStyle2}>{t("Contact.address")}</p>
+                <p className={textStyle}>{t("Contact.city")}</p>
               </div>
             </div>
           </div>
