@@ -41,7 +41,7 @@ export default function Contacts() {
       message: message,
     };
     emailjs
-      .sendForm(
+      .send(
         "service_euzh8to",
         "template_frb5eq4",
         templateParams,
@@ -117,7 +117,7 @@ export default function Contacts() {
                   onChange={(e) => setPhone(e.target.value)}
                   value={phone}
                   placeholder={t("Contact.phone")}
-                  pattern="[0-9]"
+                  
                   onInput={(e) => {
                     e.target.value = e.target.value.replace(/[^0-9]/g, "");
                   }}
@@ -125,8 +125,6 @@ export default function Contacts() {
               </div>
               <textarea
                 className="bg-gray-800  text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 font-sans h-36 w-full mt-6"
-                name=""
-                id=""
                 onChange={(e) => setMessage(e.target.value)}
                 value={message}
               ></textarea>
