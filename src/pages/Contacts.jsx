@@ -85,7 +85,7 @@ export default function Contacts() {
             <h1 className=" text-3xl text-center md:text-justify 2xl:text-5xl font-sans mb-9 md:mb-4 dark:text-green  font-bold ">
               {t("Contact.title")}
             </h1>
-            <p className="dark:text-white md:max-w-[600px] lg:max-w-[400px] font-sans text-justify mb-5 2xl:text-lg">
+            <p className="dark:text-white md:max-w-[600px] lg:max-w-[400px] 2xl:max-w-[600px] font-sans text-justify mb-5 2xl:text-lg">
               {t("Contact.subtitle")}
             </p>
             <form onSubmit={sendEmail}>
