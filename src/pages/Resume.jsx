@@ -43,7 +43,9 @@ export default function Resume() {
             <h2 className="text-black dark:text-white font-sans font-bold text-4xl text-center lg:text-start  lg:text-4xl 2xl:text-6xl">
             {t("About.title")}{" "}
             </h2>
-            <p className="text-slate dark:text-white tracking-tighter md:max-w-[600px] lg:max-w-[400px] 2xl:max-w-[600px] font-sans  text-center lg:text-justify 2xl:text-lg">
+            <p
+          
+            className="text-slate dark:text-white tracking-tighter md:max-w-[600px] lg:max-w-[400px] 2xl:max-w-[600px] font-sans  text-center lg:text-justify 2xl:text-lg">
               {t("About.description")}
             </p>
             <div className="flex justify-center items-center lg:flex lg:items-start flex-col gap-5">

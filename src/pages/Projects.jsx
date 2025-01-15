@@ -86,17 +86,19 @@ export default function Projects() {
         <Particle />
       </div>
 
-      <div className="  flex justify-center items-start md:items-center h-screen mt-10 md:mt-0 darK:bg-black ">
-        <div className="rounded-2xl flex justify-center items-center flex-col-reverse lg:flex-row gap-10 2xl:gap-44 lg:gap-20 dark:bg-black dark:bg-opacity-50 p-5 lg:p-10 w-full max-w-7xl">
+      <div className="  flex justify-center items-start md:items-center h-screen mt-10 md:mt-0 lg:mt-6 2xl:mt-0 darK:bg-black ">
+        <div className="rounded-2xl flex justify-center items-center flex-col-reverse lg:flex-row gap-10 2xl:gap-44 lg:gap-20 dark:bg-black dark:bg-opacity-50 p-5 lg:p-10 w-full max-w-7xl 2xl:p-0">
           {/* Text Section */}
           <div className="flex flex-col gap-5">
             <h2 className="text-7xl dark:text-white text-outline-dark  font-extrabold text-transparent">
               {items[indiceAtual].number}
             </h2>
-            <h2 className="font-sans text-4xl 2xl:text-5xl font-bold tracking-tighter lg:max-w-[400px] dark:text-white">
+            <h2 className="font-sans text-4xl 2xl:text-5xl  font-bold tracking-tighter lg:max-w-[500px] 2xl:max-w-[600px]   dark:text-white">
               {items[indiceAtual].title}
             </h2>
-            <p className="dark:text-white tracking-tighter md:max-w-[600px] lg:max-w-[400px] font-sans text-justify 2xl:text-lg">
+            <p
+            style={{ wordSpacing: '-3px' }}
+            className="dark:text-white tracking-normal  md:max-w-[600px] lg:max-w-[500px] 2xl:max-w-[900px] font-sans text-justify 2xl:text-lg">
               {items[indiceAtual].description}
             </p>
             <p className="text-green font-sans text-[20px] sm:text-2xl font-bold lg:font-normal border-b-2 lg:border-b  border-black dark:border-white pb-5">

@@ -5,6 +5,10 @@ export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"], // Certifique-se de que os caminhos estão corretos
   theme: {
     extend: {
+      
+      letterSpacing: {
+        custom: '-0.2em', // Adiciona um valor personalizado
+      },
       zIndex: {
         max: "2147483647", // Definindo o valor máximo possível
       },

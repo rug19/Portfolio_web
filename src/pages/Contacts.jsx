@@ -11,7 +11,7 @@ const iconStyle = {
   className: "text-green",
 };
 const inputStyle =
-  "bg-gray-800 text-black dark:text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 font-sans h-15 w-full ";
+  "bg-gray-800 text-black dark:text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 font-sans h-15 lg:h-10 2xl:h-15 w-full ";
 export default function Contacts() {
   const [name, setName] = useState();
   const [lastName, setLastName] = useState();
@@ -124,7 +124,7 @@ export default function Contacts() {
                 />
               </div>
               <textarea
-                className="bg-gray-800  text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 font-sans h-36 w-full mt-6"
+                className="bg-gray-800  text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 font-sans h-36 lg:h-28 2xl:h-36 w-full mt-6"
                 onChange={(e) => setMessage(e.target.value)}
                 value={message}
               ></textarea>
@@ -144,7 +144,7 @@ export default function Contacts() {
               </div>
               <div>
                 <p className={textStyle2}>{t("Contact.phone")}</p>
-                <p className={textStyle}>55 859 91963095</p>
+                <p className={textStyle}>+55 859 9196-3095</p>
               </div>
             </div>
             <div className=" flex  items-center gap-5 w-full">
