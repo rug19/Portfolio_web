@@ -37,7 +37,7 @@ export default function Resume() {
       </div>
 
       {/* Container */}
-      <div className="h-screen sm:h-screen lg:h-screen flex  justify-center items-center mt-20 lg:mt-0  dark:bg-black z-[5] ">
+      <div className="h-screen sm:h-screen lg:h-screen flex  justify-center items-center mt-20 lg:mt-0  dark:bg-black z-[5]  ">
         <div className="h-screen sm:h-screen lg:h-auto rounded-2xl  flex flex-col lg:flex-row gap-10 lg:gap-20  dark:bg-black dark:bg-opacity-70 p-5   lg:p-10 w-1/1 2xl:gap-x-44 z-[5]">
           <div className="flex flex-col gap-5">
             <h2 className="text-black dark:text-white font-sans font-bold text-4xl text-center lg:text-start  lg:text-4xl 2xl:text-6xl">
@@ -48,7 +48,7 @@ export default function Resume() {
             className="text-slate dark:text-white tracking-tighter md:max-w-[600px] lg:max-w-[400px] 2xl:max-w-[600px] font-sans  text-center lg:text-justify 2xl:text-lg">
               {t("About.description")}
             </p>
-            <div className="flex justify-center items-center lg:flex lg:items-start flex-col gap-5">
+            <div className="flex justify-center items-center lg:flex lg:items-start flex-col gap-5 mb-10 lg:mb-10">
               <button
                 onClick={() => setSelectPage("education")}
                 className={selectPage === "education" ? selectedButtonClasses : buttonClasses}

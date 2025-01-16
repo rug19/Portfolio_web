@@ -6,13 +6,14 @@ import {
   faInstagram,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
-import IconLink from "../components/IconButton";
 import Particle from "../components/Particle";
 import { motion } from "framer-motion";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const linkStyle =
+    "flex items-center justify-center w-10 h-10   border-2 border-green rounded-full text-green hover:bg-green hover:text-primary cursor-pointer";
   const { t } = useTranslation();
   const [text] = useTypewriter({
     words: [t("Home.subtitle")],
@@ -63,10 +64,35 @@ export default function Home() {
                 </span>
               </button>
               <div className="flex gap-3">
-                <IconLink icon={faGithub} />
-                <IconLink icon={faLinkedinIn} />
-                <IconLink icon={faInstagram} />
-                <IconLink icon={faWhatsapp} />
+                <a
+                  className={linkStyle}
+                  href="https://github.com/rug19"
+                  target="_blank"
+                >
+                  {" "}
+                  <FontAwesomeIcon size="lg" icon={faGithub} />
+                </a>
+                <a
+                  className={linkStyle}
+                  href="https://www.linkedin.com/in/ruan-gomes-a0b446187/"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon size="lg" icon={faLinkedinIn} />{" "}
+                </a>
+                <a
+                  className={linkStyle}
+                  href="https://www.instagram.com/_rugcosta/"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon size="lg" icon={faInstagram} />{" "}
+                </a>
+                <a
+                  className={linkStyle}
+                  href="https://wa.me/+5521991963095"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon size="lg" icon={faWhatsapp} />
+                </a>
               </div>
             </div>
           </div>
