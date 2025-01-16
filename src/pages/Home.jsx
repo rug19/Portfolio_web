@@ -12,6 +12,12 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const { i18n } = useTranslation();
+  //Links dos PDFs
+  const pdfLinks = {
+    pt: "../../Ruan Gomes Costa (Português).pdf",
+    en: "../../Ruan Gomes Costa (Inglês).pdf",
+  };
   const linkStyle =
     "flex items-center justify-center w-10 h-10   border-2 border-green rounded-full text-green hover:bg-green hover:text-primary cursor-pointer";
   const { t } = useTranslation();
@@ -57,12 +63,16 @@ export default function Home() {
               {t("Home.description")}
             </p>
             <div className="flex flex-col lg:flex-row gap-5 items-center z-[5] ">
-              <button className=" border-2 border-green  text-green tracking-widest  font-semibold font-sans  text-xs px-3 py-2 rounded-full hover:bg-green hover:text-primary md:mb-2 lg:mb-0">
+              <a
+                href={pdfLinks[i18n.language] || pdfLinks.en}
+                download
+                className=" border-2 border-green  text-green tracking-widest  font-semibold font-sans  text-xs px-3 py-2 rounded-full hover:bg-green hover:text-primary md:mb-2 lg:mb-0"
+              >
                 {t("Home.button")}{" "}
                 <span>
                   <FontAwesomeIcon className="text-inherit" icon={faDownload} />
                 </span>
-              </button>
+              </a>
               <div className="flex gap-3">
                 <a
                   className={linkStyle}

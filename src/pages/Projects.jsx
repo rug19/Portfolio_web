@@ -6,7 +6,6 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-
 const getTranslateZ = () => {
   const width = window.innerWidth;
 
@@ -47,13 +46,10 @@ export default function Projects() {
       id: 2,
       number: "02",
       title: t("Projects.title2"),
-      description:
-        t("Projects.description2"),
+      description: t("Projects.description2"),
       tecnolohies: "React, JavaScript, CSS",
-      liveUrl:
-        "https://rug19.github.io/huddle-landing-page-with-curved-sections-master/",
-      gitUrl:
-        "https://github.com/rug19/huddle-landing-page-with-curved-sections-master.git",
+      liveUrl: "https://rug19.github.io/time_tracking_dashboard/",
+      gitUrl: "https://github.com/rug19/time_tracking_dashboard.git",
       image: "/desktop-design.jpg",
       alt: "Dashboard",
     },
@@ -97,8 +93,9 @@ export default function Projects() {
               {items[indiceAtual].title}
             </h2>
             <p
-            style={{ wordSpacing: '-3px' }}
-            className="dark:text-white tracking-normal  md:max-w-[600px] lg:max-w-[500px] 2xl:max-w-[900px] font-sans text-justify 2xl:text-lg">
+              style={{ wordSpacing: "-3px" }}
+              className="dark:text-white tracking-normal  md:max-w-[600px] lg:max-w-[500px] 2xl:max-w-[900px] font-sans text-justify 2xl:text-lg"
+            >
               {items[indiceAtual].description}
             </p>
             <p className="text-green font-sans text-[20px] sm:text-2xl font-bold lg:font-normal border-b-2 lg:border-b  border-black dark:border-white pb-5">
