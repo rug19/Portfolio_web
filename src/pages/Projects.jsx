@@ -94,7 +94,7 @@ export default function Projects() {
             </h2>
             <p
               style={{ wordSpacing: "-3px" }}
-              className="dark:text-white tracking-normal  md:max-w-[600px] lg:max-w-[500px] 2xl:max-w-[900px] font-sans text-justify 2xl:text-lg"
+              className="dark:text-white   md:max-w-[600px] lg:max-w-[500px] 2xl:max-w-[900px]   font-sans  sm:text-justify 2xl:text-lg"
             >
               {items[indiceAtual].description}
             </p>
