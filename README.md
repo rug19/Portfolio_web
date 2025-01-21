@@ -5,13 +5,14 @@
 Este é o meu projeto de portfólio desenvolvido para apresentar minhas habilidades, projetos e experiências profissionais na área de desenvolvimento. Ele foi construído com JavaScript, React e Tailwind CSS, com foco em responsividade, acessibilidade e experiência do usuário.
 
 # 🚀 Funcionalidades
-- 🌐 Multilíngue: Alterne entre os idiomas (ex.: Português e Inglês).
+- 🌐 Multilíngue: Alterne entre os idiomas (Português e Inglês).
 - 🌙 Dark Mode: Personalize o tema para uma experiência agradável em ambientes claros ou escuros.
 - 📄 Página inicial: Introdução com habilidades e objetivos destacados.
-- 👤 Sobre mim: Informações pessoais e experiências profissionais.
+- 👤 Sobre mim: Informações pessoais, habilidades e experiências profissionais.
 - 💻 Projetos: Galeria interativa com links para repositórios e demonstrações ao vivo.
 - 📬 Contato: Formulário para visitantes entrarem em contato diretamente comigo.
 - 📱 Responsividade: Design adaptado para dispositivos móveis, tablets e desktops.
+  
 # 🔧 Tecnologias Utilizadas
 Frontend:
 - JavaScript (ES6+): Utilizado para lógica de programação e interatividade.
@@ -20,6 +21,7 @@ Frontend:
 - Framer Motion: Biblioteca para animações e transições suaves na interface.
 - Email.js: Serviço para envio de emails diretamente do frontend (para o formulário de contato).
 - i18next: Biblioteca para implementar internacionalização e suporte a múltiplos idiomas.
+  
 # 📸 Demonstração
 
 Confira o projeto em ação no link abaixo:
