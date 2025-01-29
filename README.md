@@ -53,6 +53,6 @@ http://localhost:3000
 ```
 
 # 📞 Contato
-- LinkedIn: [linkedin.com/in/seu-perfil](https://www.linkedin.com/in/ruan-gomes-a0b446187/)
+- LinkedIn: [Ruan_Gomes](https://www.linkedin.com/in/ruan-gomes-a0b446187/)
 - Email: rugcosta1234@gmail.com
-- Portfólio: [www.seu-portfolio.com](https://portfolio-web-mu-cyan.vercel.app/)
+- Portfólio: [Rugcosta](https://portfolio-web-mu-cyan.vercel.app/)
