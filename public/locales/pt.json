@@ -39,6 +39,8 @@
   "Projects.description1": "Este projeto consiste em uma landing page moderna e responsiva, desenvolvida com foco em design atrativo, desempenho otimizado e experiência do usuário.",
   "Projects.title2": "Projeto Painel de Controle",
   "Projects.description2": "Este projeto é um dashboard interativo e responsivo, desenvolvido para visualizar, monitorar e gerenciar dados de forma eficiente.",
+  "Projects.title3": "Formulário de inscrição",
+  "Projects.description3": "Este projeto é um formulário de inscrição, que permite aos usuários se inscreverem fornecendo seu endereço de e-mail e retorna uma mensagem de confirmação para informar o usuário que a inscrição foi bem-sucedida.",
   "Contact.title": "Vamos trabalhar juntos",
   "Contact.subtitle": "Entre em contato comigo para discutir como podemos colaborar em seu próximo projeto.",
   "Contact.firstName": "Nome",

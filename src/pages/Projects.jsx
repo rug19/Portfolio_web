@@ -6,7 +6,6 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-
 const getTranslateZ = () => {
   const width = window.innerWidth;
 
@@ -47,8 +46,7 @@ export default function Projects() {
       id: 2,
       number: "02",
       title: t("Projects.title2"),
-      description:
-        t("Projects.description2"),
+      description: t("Projects.description2"),
       tecnolohies: "React, JavaScript, CSS",
       liveUrl:
         "https://rug19.github.io/huddle-landing-page-with-curved-sections-master/",
@@ -56,6 +54,19 @@ export default function Projects() {
         "https://github.com/rug19/huddle-landing-page-with-curved-sections-master.git",
       image: "/desktop-design.jpg",
       alt: "Dashboard",
+    },
+    {
+      id: 3,
+      number: "03",
+      title: t("Projects.title3"),
+      description: t("Projects.description3"),
+      tecnolohies: "React, JavaScript, CSS",
+      liveUrl:
+        "https://rug19.github.io/huddle-landing-page-with-curved-sections-master/",
+      gitUrl:
+        "https://github.com/rug19/huddle-landing-page-with-curved-sections-master.git",
+      image: "/public/desktop-design-1.jpg",
+      alt: "Newsletter sign-up form with success message solution",
     },
   ];
 
@@ -93,12 +104,15 @@ export default function Projects() {
             <h2 className="text-7xl dark:text-white text-outline-dark  font-extrabold text-transparent">
               {items[indiceAtual].number}
             </h2>
-            <h2 className="font-sans text-4xl 2xl:text-5xl font-bold tracking-tighter lg:max-w-[400px] dark:text-white">
+            <h2 className="font-sans text-4xl 2xl:text-5xl font-bold tracking-tighter lg:max-w-[480px] dark:text-white">
               {items[indiceAtual].title}
             </h2>
-            <p className="dark:text-white tracking-tighter md:max-w-[600px] lg:max-w-[400px] font-sans text-justify 2xl:text-lg">
-              {items[indiceAtual].description}
-            </p>
+            <div className=" lg:h-20">
+              <p className="dark:text-white tracking-tighter md:max-w-[600px] lg:max-w-[480px] lg:max-h-[200px] font-sans text-justify 2xl:text-lg">
+                {items[indiceAtual].description}
+              </p>
+            </div>
+
             <p className="text-green font-sans text-[20px] sm:text-2xl font-bold lg:font-normal border-b-2 lg:border-b  border-black dark:border-white pb-5">
               {items[indiceAtual].tecnolohies}
             </p>

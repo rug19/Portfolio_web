@@ -40,6 +40,8 @@
   "Projects.description1": "This project consists of a modern, responsive landing page, developed with a focus on attractive design, optimized performance, and user experience.",
   "Projects.title2": "Dashboard Project",
   "Projects.description2": "This project is an interactive, responsive dashboard, developed to visualize, monitor, and manage data efficiently.",
+  "Projects.title3": "Sign-up form",
+  "Projects.description3": "This project is a sign-up form, that allows users to subscribe by providing their email address and returning a confirmation message to inform the user that the sign-up was successful.",
   "Contact.title": "Let's work together",
   "Contact.subtitle": "Get in touch with me to discuss how we can collaborate on your next project.",
   "Contact.firstName": "First Name",
