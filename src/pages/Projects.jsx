@@ -63,7 +63,7 @@ export default function Projects() {
       liveUrl: "https://rug19.github.io/newsletter-sign-up-with-success-message-main/",
       gitUrl: "https://github.com/rug19/newsletter-sign-up-with-success-message-main.git",
       image: "/Sign-form design.jpg",
-      alt: "Dashboard",
+      alt: "Sign form",
     },
 
     {
@@ -73,8 +73,8 @@ export default function Projects() {
       description: t("Projects.description4"),
       tecnolohies: "React, JavaScript, Tailwind, Prisma, Node, MySQL",
       gitUrl: "https://github.com/rug19/Contact_Manangement_API_2.0.git",
-      image: "/public/teste_1.PNG",
-      alt: "Dashboard",
+      image: "/teste_1.PNG",
+      alt: "Contact Management",
     },
   ];
 
