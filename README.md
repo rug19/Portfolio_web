@@ -1,5 +1,8 @@
 
+
+
 # 📋 Projeto de Portfólio
+![Demonstração do Projeto](./public/unknown_2025.01.20-21.31_1.gif)
 
 ### 🎯 Descrição
 Este é o meu projeto de portfólio desenvolvido para apresentar minhas habilidades, projetos e experiências profissionais na área de desenvolvimento. Ele foi construído com JavaScript, React e Tailwind CSS, com foco em responsividade, acessibilidade e experiência do usuário.

@@ -24,7 +24,8 @@ export default function Projects() {
   const [isAnimating, setIsAnimating] = useState(false);
   const linkStyle =
     "flex items-center justify-center w-14 h-14 lg:w-11 lg:h-11 border-2 border-green rounded-full text-green hover:bg-green hover:text-primary cursor-pointer";
-  const imgContainer = "relative z- w-full max-w-[500px]  aspect-[10/7] ";
+  const imgContainer =
+    "relative z- w-full max-w-[500px]  aspect-[10/7] ${item.id === 4 ? 'border border-black' : ''}`}";
   const buttonStyle =
     "flex items-center justify-center  lg:w-8 h-7 border-2 border-green text-black bg-green hover:text-primary cursor-pointer";
 
@@ -51,6 +52,28 @@ export default function Projects() {
       liveUrl: "https://rug19.github.io/time_tracking_dashboard/",
       gitUrl: "https://github.com/rug19/time_tracking_dashboard.git",
       image: "/desktop-design.jpg",
+      alt: "Dashboard",
+    },
+    {
+      id: 3,
+      number: "03",
+      title: t("Projects.title3"),
+      description: t("Projects.description3"),
+      tecnolohies: "React, JavaScript, CSS",
+      liveUrl: "https://rug19.github.io/newsletter-sign-up-with-success-message-main/",
+      gitUrl: "https://github.com/rug19/newsletter-sign-up-with-success-message-main.git",
+      image: "/Sign-form design.jpg",
+      alt: "Dashboard",
+    },
+
+    {
+      id: 4,
+      number: "04",
+      title: t("Projects.title4"),
+      description: t("Projects.description4"),
+      tecnolohies: "React, JavaScript, Tailwind, Prisma, Node, MySQL",
+      gitUrl: "https://github.com/rug19/Contact_Manangement_API_2.0.git",
+      image: "/public/teste_1.PNG",
       alt: "Dashboard",
     },
   ];
@@ -94,11 +117,11 @@ export default function Projects() {
             </h2>
             <p
               style={{ wordSpacing: "-3px" }}
-              className="dark:text-white   md:max-w-[600px] lg:max-w-[500px] 2xl:max-w-[900px]   font-sans  sm:text-justify 2xl:text-lg"
+              className="dark:text-white   md:max-w-[600px] lg:max-w-[500px] 2xl:max-w-[900px]    font-sans  sm:text-justify 2xl:text-lg"
             >
               {items[indiceAtual].description}
             </p>
-            <p className="text-green font-sans text-[20px] sm:text-2xl font-bold lg:font-normal border-b-2 lg:border-b  border-black dark:border-white pb-5">
+            <p className="text-green font-sans text-[20px] sm:text-2xl font-bold lg:font-normal border-b-2 lg:border-b lg:max-w-[500px] 2xl:max-w-[600px] border-black dark:border-white pb-5">
               {items[indiceAtual].tecnolohies}
             </p>
             <div className="flex gap-3">
@@ -135,7 +158,9 @@ export default function Projects() {
               {items.map((item, index) => (
                 <motion.img
                   key={index}
-                  className="absolute w-full h-full"
+                  className={`absolute w-full h-full ${
+                    item.id === 4 ? "border border-black" : ""
+                  }`} // Adiciona a borda preta apenas para o item com id 4
                   src={item.image}
                   alt={item.alt}
                   style={{
