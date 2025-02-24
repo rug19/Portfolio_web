@@ -78,8 +78,8 @@ export default function Contacts() {
       >
         <Particle />
       </div>
-      <div className="h-screen flex justify-center items-center  ">
-        <div className="rounded-2xl flex  flex-col-reverse lg:flex-row gap-10 2xl:gap-44 lg:gap-20 dark:bg-black dark:bg-opacity-50 p-5 lg:p-10 mt-48 md:mt-0">
+      <div className="lg:h-screen flex justify-center items-center  ">
+        <div className="rounded-2xl flex  flex-col-reverse lg:flex-row gap-10 2xl:gap-44 lg:gap-20 dark:bg-black dark:bg-opacity-50 p-5 lg:p-10  md:mt-0">
           <div className="lg:mt-12">
             {" "}
             <h1 className=" text-3xl text-center md:text-justify 2xl:text-5xl font-sans mb-9 md:mb-4 dark:text-green  font-bold ">
@@ -137,7 +137,7 @@ export default function Contacts() {
             </form>
           </div>
 
-          <div className="flex flex-col gap-5 justify-center  items-center mt-20">
+          <div className="flex flex-col gap-5 justify-center  items-center mt-20 md:mt-48 lg:mt-28">
             <div className=" flex   items-center gap-5 w-full">
               <div className="flex justify-center items-center  w-12 h-12  bg-gray-800  text-white rounded font-sans">
                 <FaPhone {...iconStyle} />

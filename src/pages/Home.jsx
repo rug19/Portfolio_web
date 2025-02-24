@@ -46,7 +46,7 @@ export default function Home() {
       </div>
 
       {/* Main container */}
-      <div id="home" className=" h-screen flex justify-center items-center">
+      <div id="home" className=" md:h-screen flex justify-center items-center">
         <div className="flex flex-col-reverse justify-around flex-justify lg:flex-row items-center lg:gap-20 2xl:flex-row 2xl:gap-28">
           <div className=" flex flex-col  lg:gap-7 md:flexitems-center">
             <h1 className="text-3xl font-semibold lg:font-normal md:text-6xl 2xl:text-8xl font-sans tracking-tighter text-black dark:text-white max-[400px]:text-3xl text-center lg:text-left leading-tight md:mb-8 lg:mb-0">
@@ -108,7 +108,7 @@ export default function Home() {
           </div>
 
           {/* Img container */}
-          <div className=" mt-10 md:mt-5 md:mb-14 lg:mb-0 lg:mt-0 ">
+          <div className=" mt-24 md:mt-5 md:mb-14 lg:mb-0 lg:mt-0 ">
             <motion.img
               className="w-72  h-72 sm:w-72 sm:h-72 md:w-96 md:h-96 lg:w-80 lg:h-80 2xl:w-96 2xl:h-96 object-cover rounded-full"
               src="../../Design sem nome (1).png"
