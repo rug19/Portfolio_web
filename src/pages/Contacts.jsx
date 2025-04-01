@@ -13,11 +13,11 @@ const iconStyle = {
 const inputStyle =
   "bg-gray-800 text-black dark:text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 font-sans h-15 lg:h-10 2xl:h-15 w-full ";
 export default function Contacts() {
-  const [name, setName] = useState();
-  const [lastName, setLastName] = useState();
-  const [email, setEmail] = useState();
-  const [phone, setPhone] = useState();
-  const [message, setMessage] = useState();
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
 
   function sendEmail(e) {
     e.preventDefault();
