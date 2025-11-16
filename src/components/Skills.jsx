@@ -14,7 +14,6 @@ import { SiSpring, SiTypescript, SiNextdotjs } from "react-icons/si";
 import { useTranslation } from "react-i18next";
 
 export default function Skills() {
-
   const { t } = useTranslation();
   const iconStyle = {
     size: 60,
