@@ -22,6 +22,7 @@ export default function AboutMe() {
       {value}
     </p>
   );
+  
 
   return (
     <section>
