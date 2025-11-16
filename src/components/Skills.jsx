@@ -10,7 +10,7 @@ import {
   FaJava,
 } from "react-icons/fa"; // Ícones do Font Awesome
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiSpring, SiTypescript } from "react-icons/si";
+import { SiSpring, SiTypescript, SiNextdotjs } from "react-icons/si";
 import { useTranslation } from "react-i18next";
 
 export default function Skills() {
@@ -66,6 +66,10 @@ export default function Skills() {
     {
       id: 12,
       icon: <SiTypescript {...iconStyle} />,
+    },
+    {
+      id: 13,
+      icon: <SiNextdotjs {...iconStyle} />,
     },
   ];
   return (
