@@ -10,9 +10,11 @@ import {
   FaJava,
 } from "react-icons/fa"; // Ícones do Font Awesome
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiSpring, SiTypescript } from "react-icons/si";
+import { SiSpring, SiTypescript, SiNextdotjs } from "react-icons/si";
+import { useTranslation } from "react-i18next";
 
 export default function Skills() {
+  const { t } = useTranslation();
   const iconStyle = {
     size: 60,
     className: "hover:text-green transition-colors",
@@ -64,25 +66,27 @@ export default function Skills() {
       id: 12,
       icon: <SiTypescript {...iconStyle} />,
     },
+    {
+      id: 13,
+      icon: <SiNextdotjs {...iconStyle} />,
+    },
   ];
   return (
     <>
       <div>
         <div>
-          <h1 className="text-white font-sans font-semibold text-center lg:text-start  text-4xl lg:text-3xl mb-5 2xl:text-4xl">
-            My Skills
+          <h1 className="text-black dark:text-white font-sans font-semibold text-center lg:text-start  text-4xl lg:text-3xl mb-5 2xl:text-4xl">
+            {t("Skills.title")}
           </h1>
-          <p className="text-white font-sans lg:max-w-[500px] md:max-w-[600px] 2xl:max-w-[600px] text-center lg:text-justify 2xl:text-lg">
-            I have developed a diverse set of skills in front-end and back-end
-            development, committed to delivering high-quality solutions for
-            users and businesses.
+          <p className="dark:text-white tracking-tighter  font-sans lg:max-w-[600px] md:max-w-[600px] 2xl:max-w-[600px] text-center lg:text-justify 2xl:text-lg">
+            {t("Skills.description")}
           </p>
         </div>
 
         <div className=" lg:max-h-52 h-auto  lg:overflow-auto lg:scrollbar-thin lg:scrollbar-thumb-green lg:scrollbar-track-transparent pt-2 grid grid-cols-2  sm:grid-cols-3 md:grid-cols-4  gap-3 sm:mt-5 mb-10 sm:mb-0">
           {icons.map((item) => (
             <div
-              className="  flex justify-center items-center  w-full p-4 bg-gray-800 bg-opacity-50 text-white rounded font-sans"
+              className="  flex justify-center items-center  w-full p-4 bg-gray-800  text-white rounded font-sans"
               key={item.id}
             >
               <div>{item.icon}</div>
