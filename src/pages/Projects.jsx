@@ -39,7 +39,6 @@ export default function Projects() {
       technologies: [
         { icon: <FaHtml5 />, name: "HTML5", color: "#E34F26" },
         { icon: <FaCss3Alt />, name: "CSS3", color: "#1572B6" },
-        { icon: <SiJavascript />, name: "JavaScript", color: "#F7DF1E" },
       ],
       liveUrl:
         "https://rug19.github.io/huddle-landing-page-with-curved-sections-master/",
@@ -95,7 +94,7 @@ export default function Projects() {
         { icon: <SiMysql />, name: "MySQL", color: "#4479A1" },
       ],
       gitUrl: "https://github.com/rug19/Contact_Manangement_API_2.0.git",
-      image: "/teste_1.PNG",
+      image: "/contact_management_1440x1024.png",
       alt: "Contact Management",
     },
     {
