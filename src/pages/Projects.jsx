@@ -86,9 +86,6 @@ export default function Projects() {
       title: t("Projects.title4"),
       description: t("Projects.description4"),
       technologies: [
-        { icon: <FaReact />, name: "React", color: "#61DAFB" },
-        { icon: <SiJavascript />, name: "JavaScript", color: "#F7DF1E" },
-        { icon: <SiTailwindcss />, name: "Tailwind", color: "#06B6D4" },
         { icon: <SiPrisma />, name: "Prisma", color: "#2D3748" },
         { icon: <FaNodeJs />, name: "Node.js", color: "#339933" },
         { icon: <SiMysql />, name: "MySQL", color: "#4479A1" },
